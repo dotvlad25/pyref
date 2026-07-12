@@ -72,6 +72,9 @@ let byId = new Map();     // id -> index record (title, keywords, category, rela
 let current = [];         // current result list (array of index records)
 let activeIdx = -1;       // highlighted result index
 let currentId = null;     // id of the article currently rendered
+let currentQuery = "";    // latest search query (for highlighting in the article)
+let renderedQuery = "";   // query that was actually highlighted in the shown article
+let highlightEnabled = true;  // toggle: highlight search terms in the article body
 const bodyCache = new Map();
 
 /* ---------- Theme ---------- */
@@ -130,6 +133,7 @@ async function init() {
 
   configureMarked();
   bindEvents();
+  initHighlightToggle();
   showBrowseAll();
 
   // Route from the URL hash: open a bookmarked/refreshed article, else focus search.
@@ -165,6 +169,7 @@ function highlightCode(root) {
 
 function runSearch(q) {
   q = q.trim();
+  currentQuery = q;
   if (!q) { showBrowseAll(); return; }
 
   const hits = mini.search(q);
@@ -176,6 +181,7 @@ function runSearch(q) {
 
 function showBrowseAll() {
   // No query: list everything, grouped feel via category label.
+  currentQuery = "";
   current = Array.from(byId.values()).sort((a, b) => a.title.localeCompare(b.title));
   activeIdx = -1;
   renderResults(`${current.length} articles`);
@@ -226,7 +232,18 @@ function openArticle(id, push = true) {
 }
 
 async function loadArticle(id) {
-  if (id === currentId) return;            // already showing it
+  if (id === currentId) {
+    // Same article already shown, but the query may have changed since it
+    // rendered (search auto-opens the top result on every keystroke) — so
+    // re-apply term highlighting instead of bailing out entirely.
+    if (renderedQuery !== currentQuery) {
+      const bodyEl = els.article.querySelector(".article-body");
+      clearHighlights(bodyEl);
+      highlightQueryTerms(bodyEl, currentQuery);
+      renderedQuery = currentQuery;
+    }
+    return;
+  }
   currentId = id;
   let data = bodyCache.get(id);
   if (!data) {
@@ -262,7 +279,84 @@ function renderArticle(data) {
   document.title = `${data.title} · pyref`;
   syncActiveResult(data.id);
   highlightCode(els.article);
+  highlightQueryTerms(els.article.querySelector(".article-body"), currentQuery);
+  renderedQuery = currentQuery;
   addCopyButtons();
+}
+
+// Remove previously inserted <mark> wrappers, restoring plain text nodes.
+function clearHighlights(root) {
+  if (!root) return;
+  root.querySelectorAll("mark.search-hit").forEach((m) => {
+    m.replaceWith(document.createTextNode(m.textContent));
+  });
+  root.normalize();   // merge adjacent text nodes so re-highlighting is clean
+}
+
+// Re-apply or clear highlights on the currently shown article (no re-fetch).
+function refreshHighlights() {
+  const body = els.article.querySelector(".article-body");
+  if (!body) return;
+  clearHighlights(body);
+  if (highlightEnabled) highlightQueryTerms(body, currentQuery);
+}
+
+function initHighlightToggle() {
+  const btn = document.getElementById("hl-toggle");
+  if (!btn) return;
+  try {
+    highlightEnabled = localStorage.getItem("pyref-highlight") !== "off";
+  } catch {}
+  btn.classList.toggle("active", highlightEnabled);
+  btn.addEventListener("click", () => {
+    highlightEnabled = !highlightEnabled;
+    btn.classList.toggle("active", highlightEnabled);
+    try { localStorage.setItem("pyref-highlight", highlightEnabled ? "on" : "off"); } catch {}
+    refreshHighlights();     // apply immediately to the open article
+  });
+}
+
+// Wrap occurrences of each query term in <mark> across text nodes (works inside
+// highlighted code too, since it runs after hljs). Safe: operates only on text
+// nodes, never on tags/attributes.
+function highlightQueryTerms(root, query) {
+  if (!root || !query || !highlightEnabled) return;
+  const terms = query
+    .split(/\s+/)
+    .map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))   // escape regex chars
+    .filter((t) => t.length >= 2);                          // skip 1-char noise
+  if (!terms.length) return;
+  const alt = terms.join("|");
+  const testRe = new RegExp(alt, "i");         // non-global: safe, stateless .test()
+  const splitRe = new RegExp(`(${alt})`, "gi"); // global: for the replace loop
+
+  const SKIP = new Set(["MARK", "SCRIPT", "STYLE"]);
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      if (node.parentNode && SKIP.has(node.parentNode.nodeName)) return NodeFilter.FILTER_REJECT;
+      return testRe.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    },
+  });
+
+  const targets = [];
+  while (walker.nextNode()) targets.push(walker.currentNode);
+
+  for (const node of targets) {
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    node.nodeValue.replace(splitRe, (match, _g, offset) => {
+      if (offset > last) frag.appendChild(document.createTextNode(node.nodeValue.slice(last, offset)));
+      const mark = document.createElement("mark");
+      mark.className = "search-hit";
+      mark.textContent = match;
+      frag.appendChild(mark);
+      last = offset + match.length;
+      return match;
+    });
+    if (last < node.nodeValue.length) frag.appendChild(document.createTextNode(node.nodeValue.slice(last)));
+    node.parentNode.replaceChild(frag, node);
+  }
 }
 
 // Highlight the open article in the results list if it's present there.
@@ -299,6 +393,8 @@ function bindEvents() {
   els.search.addEventListener("input", (e) => {
     clearTimeout(t);
     const v = e.target.value;
+    // Typing means "I want to search" — close the playground if it's open.
+    if (v) document.dispatchEvent(new CustomEvent("pyref:search-active"));
     t = setTimeout(() => runSearch(v), 60);
   });
 

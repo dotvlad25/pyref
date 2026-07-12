@@ -3,7 +3,7 @@ id: file-io
 title: Reading & Writing Files
 keywords: [open, read, readline, readlines, write, writelines, with, context manager, encoding, utf-8, file modes, r w a rb wb, text mode, binary mode, FileNotFoundError, iterate lines, seek, tell, close]
 category: Standard Library
-related: [file-chunking, pathlib, context-managers, contextlib, csv-module, json-module]
+related: [file-chunking, file-seek, atomic-writes, pathlib, context-managers, contextlib, json-module]
 ---
 # Reading & Writing Files
 

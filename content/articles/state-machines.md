@@ -3,7 +3,7 @@ id: state-machines
 title: State Machines
 keywords: [state machine, finite state machine, fsm, state variable, state to handler dict, parsing, event stream, lifecycle, transition, generator parser]
 category: Patterns
-related: [generator-expressions, coroutines, dict, expression-parsing, enum]
+related: [dispatch-table, generator-expressions, coroutines, dict, expression-parsing, enum]
 ---
 # State Machines
 

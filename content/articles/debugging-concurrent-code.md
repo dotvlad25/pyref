@@ -3,7 +3,7 @@ id: debugging-concurrent-code
 title: Debugging Concurrent Code
 keywords: [debugging threads, race condition, deadlock, heisenbug, threadName, logging, faulthandler, py-spy, acquire timeout, lock timeout, thread-safe logging, non-deterministic, interleaving, pdb threads]
 category: Concurrency
-related: [race-conditions, deadlocks, locks, threading-basics, gil, thread-exceptions, thread-pool]
+related: [logging, race-conditions, deadlocks, locks, threading-basics, gil, thread-exceptions]
 ---
 # Debugging Concurrent Code
 

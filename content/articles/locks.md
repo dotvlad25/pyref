@@ -3,7 +3,7 @@ id: locks
 title: Lock & RLock
 keywords: [lock, mutex, rlock, reentrant lock, threading.Lock, threading.RLock, acquire, release, critical section, mutual exclusion, with statement, thread safe, protect shared state]
 category: Concurrency
-related: [race-conditions, deadlocks, condition-variables, gil, threading-basics, semaphores]
+related: [per-key-locking, race-conditions, deadlocks, condition-variables, gil, threading-basics, semaphores]
 ---
 # Lock & RLock
 

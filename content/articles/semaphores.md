@@ -3,7 +3,7 @@ id: semaphores
 title: Semaphores
 keywords: [semaphore, threading.Semaphore, BoundedSemaphore, counter, bounded concurrency, rate limit, connection pool, acquire, release, permits, limit concurrent access]
 category: Concurrency
-related: [locks, events, condition-variables, thread-pool, barriers]
+related: [bounded-concurrency, locks, events, condition-variables, thread-pool, barriers]
 ---
 # Semaphores
 

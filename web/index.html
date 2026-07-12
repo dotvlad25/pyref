@@ -20,6 +20,8 @@
         spellcheck="false"
       >
       <div id="status" class="status"></div>
+      <button id="hl-toggle" class="hl-toggle active" title="Toggle search-term highlighting in articles">✨ Highlight</button>
+      <button id="play-btn" class="play-btn" title="Open playground (runs Python)">▶ Playground</button>
       <div class="theme-switch" id="theme-switch" role="group" aria-label="Theme">
         <button data-theme="dark"  title="Dark">Dark</button>
         <button data-theme="light" title="Light">Light</button>
@@ -35,6 +37,23 @@
           <p>Type to search. <kbd>↑</kbd><kbd>↓</kbd> to move, <kbd>Enter</kbd> to open, <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</p>
         </div>
       </article>
+
+      <!-- Playground overlay (hidden until opened) -->
+      <section id="playground" class="playground" hidden>
+        <div class="pg-toolbar">
+          <span class="pg-title">Playground</span>
+          <button id="pg-run" class="pg-run" title="Run (⌘/Ctrl+Enter)">▶ Run</button>
+          <button id="pg-reset" class="pg-btn" title="Reset to boilerplate">Reset</button>
+          <button id="pg-clear" class="pg-btn" title="Clear output">Clear output</button>
+          <span id="pg-status" class="pg-status"></span>
+          <button id="pg-close" class="pg-btn pg-close" title="Close (Esc)">✕ Close</button>
+        </div>
+        <div class="pg-body">
+          <div id="pg-editor" class="pg-editor"></div>
+          <div id="pg-vsep" class="pg-vsep"></div>
+          <pre id="pg-output" class="pg-output"><span class="pg-hint">Output appears here. Press ⌘/Ctrl+Enter to run.</span></pre>
+        </div>
+      </section>
     </main>
   </div>
 
@@ -43,5 +62,6 @@
   <script src="/vendor/highlight.min.js"></script>
   <script src="/vendor/highlight-python.min.js"></script>
   <script src="/app.js"></script>
+  <script src="/playground.js"></script>
 </body>
 </html>

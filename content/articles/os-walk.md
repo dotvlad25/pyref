@@ -3,7 +3,7 @@ id: os-walk
 title: Directory Traversal
 keywords: [os.walk, os.scandir, os.listdir, directory, traverse, recursive, dirpath, dirnames, filenames, walk tree, DirEntry, is_file, is_dir, prune directories, os.path.join, find files, topdown]
 category: Standard Library
-related: [pathlib, file-io, file-hashing]
+related: [os-path, file-metadata, pathlib, file-io, file-hashing]
 ---
 # Directory Traversal
 

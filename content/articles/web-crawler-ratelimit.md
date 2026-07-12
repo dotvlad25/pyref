@@ -3,7 +3,7 @@ id: web-crawler-ratelimit
 title: Web Crawler (Rate Limiting)
 keywords: [web crawler, rate limit, rate limiting, throttle, crawl delay, min interval, token bucket, semaphore, politeness, monotonic, sleep outside lock, requests per second, concurrency vs rate]
 category: Concurrency
-related: [web-crawler-robots, web-crawler-threadpool, web-crawler-asyncio, semaphores, locks, blocking-the-event-loop, race-conditions]
+related: [rate-limiter, web-crawler-robots, web-crawler-threadpool, web-crawler-asyncio, semaphores, locks, blocking-the-event-loop]
 ---
 # Web Crawler (Rate Limiting)
 

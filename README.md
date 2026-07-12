@@ -47,6 +47,18 @@ Open http://127.0.0.1:8000
 - `Esc` clears the query
 - Hover a code block → **copy** button
 
+## Playground
+
+Click **▶ Playground** in the header (or open `#play`) for a Monaco editor with
+Python syntax highlighting. Type a snippet and press **⌘/Ctrl+Enter** (or **Run**)
+to execute it; stdout/stderr appears in the output pane. Opens with boilerplate
+(common imports + a `main()`), and your code is auto-saved in the browser.
+
+Execution is server-side: the snippet is POSTed to `/api/run`, which runs it with
+the project's Python interpreter in a subprocess (isolated mode, 15 s wall-clock
+limit, output capped). **This runs arbitrary code you type — it is a local,
+single-user tool. Do not expose the server publicly.**
+
 ## Adding content (the loop)
 
 1. Add or edit a markdown file in `content/articles/`.

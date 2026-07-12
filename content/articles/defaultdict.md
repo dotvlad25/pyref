@@ -3,7 +3,7 @@ id: defaultdict
 title: collections.defaultdict
 keywords: [defaultdict, collections, default factory, grouping, adjacency list, int, list, set, autovivification]
 category: Data Structures
-related: [dict, counter, trie, graph-representation]
+related: [grouping, dict, counter, trie, graph-representation]
 ---
 # collections.defaultdict
 
