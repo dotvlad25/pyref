@@ -3,6 +3,7 @@ id: web-crawler-threadpool
 title: Web Crawler (Multithreaded, ThreadPool)
 keywords: [web crawler, multithreaded crawler, threadpoolexecutor, queue, thread safe, lock, seen set, sentinel, task_done, join, concurrent bfs, frontier, worker threads, race condition]
 category: Concurrency
+type: solution
 related: [web-crawler, web-crawler-asyncio, web-crawler-robots, web-crawler-ratelimit, thread-pool, queue-module, locks, race-conditions]
 ---
 # Web Crawler (Multithreaded, ThreadPool)

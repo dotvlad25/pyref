@@ -3,6 +3,7 @@ id: tree-recursion-patterns
 title: Recursive Tree Patterns
 keywords: [tree recursion, dfs return value, height, diameter, path sum, max path sum, balanced, bottom up, divide and conquer, subtree]
 category: Patterns
+type: pattern
 related: [binary-tree, tree-traversal, lowest-common-ancestor, validate-bst, recursion-memoization, dfs]
 ---
 # Recursive Tree Patterns

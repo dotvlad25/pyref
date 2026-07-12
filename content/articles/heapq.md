@@ -3,6 +3,7 @@ id: heapq
 title: heapq (Priority Queue)
 keywords: [heapq, heap, priority queue, min heap, max heap, heappush, heappop, heapify, nlargest, nsmallest, top k]
 category: Data Structures
+type: reference
 related: [heap-tuples, top-k, two-heap-median, deque, dijkstra]
 ---
 # heapq (Priority Queue)

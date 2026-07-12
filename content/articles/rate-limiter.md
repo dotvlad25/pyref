@@ -3,6 +3,7 @@ id: rate-limiter
 title: Rate Limiter (Fixed / Sliding / Token Bucket)
 keywords: [rate limiter, rate limiting, fixed window, sliding window log, token bucket, requests per second, allow_request, throttle, per user limit, boundary burst, deque, defaultdict]
 category: Patterns
+type: solution
 related: [sliding-window, deque, defaultdict, per-key-locking, web-crawler-ratelimit, ordereddict]
 ---
 # Rate Limiter (Fixed / Sliding / Token Bucket)

@@ -3,6 +3,7 @@ id: classes
 title: Classes & __init__
 keywords: [class, __init__, constructor, self, instance variable, class variable, attribute, method, oop, object, this, ListNode, TreeNode]
 category: OOP
+type: reference
 related: [dataclasses, magic-methods, slots, abc, linked-list, doubly-linked-list]
 ---
 # Classes & __init__

@@ -3,6 +3,7 @@ id: singledispatch
 title: functools.singledispatch
 keywords: [functools, singledispatch, singledispatchmethod, generic function, type dispatch, overload, register, polymorphism, multiple dispatch]
 category: Standard Library
+type: reference
 related: [dispatch-table, functools-partial, functools-reduce, dict]
 ---
 # functools.singledispatch

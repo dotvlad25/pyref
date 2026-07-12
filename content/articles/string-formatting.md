@@ -3,6 +3,7 @@ id: string-formatting
 title: String Formatting
 keywords: [format, f-string, fstring, percent formatting, str.format, format spec, padding, alignment, precision, thousands separator, repr, hex, binary, zero pad, rounding]
 category: Language
+type: reference
 related: [string-methods, string-basics, ascii-ord-chr]
 ---
 # String Formatting

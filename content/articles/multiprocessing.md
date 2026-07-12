@@ -3,7 +3,8 @@ id: multiprocessing
 title: multiprocessing (True Parallelism)
 keywords: [multiprocessing, process, pool, ProcessPoolExecutor, cpu bound, parallelism, GIL, shared memory, IPC, map]
 category: Concurrency
-related: [gil, thread-pool, threading-basics]
+type: reference
+related: [gil, thread-pool, threading-basics, os-module, bounded-concurrency]
 ---
 # multiprocessing (True Parallelism)
 

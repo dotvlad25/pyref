@@ -64,6 +64,12 @@ def parse_article(path):
 
     category = str(meta.get("category") or "Uncategorized").strip()
 
+    # Article type: one of reference/concept/algo/pattern/solution (default
+    # reference). Powers the UI type filter and search ranking.
+    art_type = str(meta.get("type") or "reference").strip().lower()
+    if art_type not in ("reference", "concept", "algo", "pattern", "solution"):
+        art_type = "reference"
+
     # Hash of the full file (frontmatter + body): any edit invalidates a prior
     # audit, so an edited article automatically shows up as needing re-audit.
     content_hash = hashlib.sha256(raw.encode("utf-8")).hexdigest()
@@ -71,6 +77,7 @@ def parse_article(path):
     return {
         "id": article_id,
         "title": title,
+        "type": art_type,
         "keywords": keywords,
         "category": category,
         "related": related,
@@ -169,6 +176,7 @@ def build():
         {
             "id": a["id"],
             "title": a["title"],
+            "type": a["type"],
             "keywords": a["keywords"],
             "category": a["category"],
             "related": a["related"],

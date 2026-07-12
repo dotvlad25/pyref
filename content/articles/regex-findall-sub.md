@@ -3,6 +3,7 @@ id: regex-findall-sub
 title: findall, finditer & sub
 keywords: [re.findall, re.finditer, re.sub, re.subn, replace, extract all, count matches, non-overlapping, iterator, match objects, substitution, backreference replace]
 category: Standard Library
+type: reference
 related: [regex-basics, regex-search-match, regex-groups, regex-compile, regex-common-patterns]
 ---
 # findall, finditer & sub

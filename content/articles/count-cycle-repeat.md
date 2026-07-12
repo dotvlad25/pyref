@@ -3,6 +3,7 @@ id: count-cycle-repeat
 title: count, cycle, repeat
 keywords: [count, cycle, repeat, itertools, infinite iterators, enumerate replacement, zip, round robin, constant iterator, takewhile, islice, auto increment id]
 category: Standard Library
+type: reference
 related: [itertools-overview, chain-islice, starmap-compress]
 ---
 # count, cycle, repeat

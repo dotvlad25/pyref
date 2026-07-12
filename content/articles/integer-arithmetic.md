@@ -3,6 +3,7 @@ id: integer-arithmetic
 title: Integer Arithmetic
 keywords: [integer, arithmetic, divmod, floor division, modulo, remainder, pow, modular exponentiation, big int, arbitrary precision, overflow, negative modulo]
 category: Language
+type: reference
 related: [math-module, bit-manipulation, number-bases, bit-tricks]
 ---
 # Integer Arithmetic

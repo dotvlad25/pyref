@@ -3,6 +3,7 @@ id: web-crawler-asyncio
 title: Web Crawler (Asyncio)
 keywords: [web crawler, async crawler, asyncio, asyncio queue, to_thread, event loop, coroutine, worker tasks, no lock, create_task, cancel, gather, concurrent bfs, frontier]
 category: Concurrency
+type: solution
 related: [web-crawler, web-crawler-threadpool, asyncio-basics, asyncio-queue, asyncio-to-thread, blocking-the-event-loop, asyncio-create-task, bfs]
 ---
 # Web Crawler (Asyncio)

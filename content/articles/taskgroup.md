@@ -3,6 +3,7 @@ id: taskgroup
 title: TaskGroup & Structured Concurrency
 keywords: [TaskGroup, asyncio.TaskGroup, structured concurrency, create_task, ExceptionGroup, except star, nursery, error handling, cancel siblings, 3.11]
 category: Concurrency
+type: reference
 related: [asyncio-gather, coroutines, asyncio-timeouts, event-loop, asyncio-basics]
 ---
 # TaskGroup & Structured Concurrency

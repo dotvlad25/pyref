@@ -3,6 +3,7 @@ id: tree-serialization
 title: Serialize/Deserialize Tree
 keywords: [serialize, deserialize, encode tree, decode tree, preorder serialization, null marker, codec, reconstruct tree, tree to string]
 category: Algorithms
+type: algo
 related: [binary-tree, tree-traversal, tree-level-order, deque, dfs]
 ---
 # Serialize/Deserialize Tree

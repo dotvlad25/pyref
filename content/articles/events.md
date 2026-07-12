@@ -3,6 +3,7 @@ id: events
 title: Event Signaling
 keywords: [event, threading.Event, set, clear, wait, is_set, signal, flag, start gun, graceful shutdown, one to many, broadcast]
 category: Concurrency
+type: reference
 related: [condition-variables, locks, threading-basics, producer-consumer, semaphores]
 ---
 # Event Signaling

@@ -3,6 +3,7 @@ id: string-basics
 title: Strings Are Immutable
 keywords: [string, str, immutable, immutability, concatenation, join, build string, O(n^2), interning, intern, is vs ==, unicode, plus equals]
 category: Language
+type: concept
 related: [string-methods, string-split-join, ascii-ord-chr, set]
 ---
 # Strings Are Immutable

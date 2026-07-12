@@ -3,6 +3,7 @@ id: enum
 title: enum
 keywords: [enum, Enum, auto, IntEnum, StrEnum, enumeration, constants, members, iteration, value, name, flag]
 category: Standard Library
+type: reference
 related: [classes, dataclasses, type-hints, namedtuple]
 ---
 # enum

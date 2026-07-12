@@ -3,6 +3,7 @@ id: chainmap
 title: collections.ChainMap
 keywords: [chainmap, collections, layered lookup, merge dicts, scopes, defaults override, configuration layers, maps, new_child, parents, fallback dict]
 category: Standard Library
+type: reference
 related: [collections-overview, dict, defaultdict]
 ---
 # collections.ChainMap

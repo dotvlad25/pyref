@@ -3,6 +3,7 @@ id: knapsack
 title: 0/1 Knapsack
 keywords: [knapsack, 0/1 knapsack, subset sum, weight value, capacity, rolling array, 1d dp, 2d dp, partition equal subset sum, dp]
 category: Algorithms
+type: algo
 related: [dp-intro, coin-change, lcs, recursion-memoization]
 ---
 # 0/1 Knapsack

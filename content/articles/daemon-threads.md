@@ -3,6 +3,7 @@ id: daemon-threads
 title: Daemon Threads
 keywords: [daemon thread, daemon flag, background thread, non-daemon, thread exit, program exit, abrupt termination, setDaemon, "Thread(daemon=True)", isDaemon, heartbeat, poller]
 category: Concurrency
+type: concept
 related: [threading-basics, subclassing-thread, sentinel-shutdown, thread-pool, producer-consumer, gil]
 ---
 # Daemon Threads

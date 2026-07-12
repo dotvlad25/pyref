@@ -3,6 +3,7 @@ id: bst
 title: Binary Search Tree
 keywords: [bst, binary search tree, insert, search, delete, remove, inorder sorted, kth smallest, ordered, successor, floor, ceiling]
 category: Data Structures
+type: algo
 related: [binary-tree, tree-traversal, validate-bst, lowest-common-ancestor, tree-recursion-patterns, binary-search]
 ---
 # Binary Search Tree

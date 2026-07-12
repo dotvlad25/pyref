@@ -3,6 +3,7 @@ id: asyncio-to-thread
 title: "asyncio.to_thread"
 keywords: [to_thread, asyncio.to_thread, offload, blocking, blocking io, run_in_executor, thread pool, background thread, sync in async, legacy library, requests, boto3, do not block event loop]
 category: Concurrency
+type: reference
 related: [asyncio-basics, run-in-executor, blocking-the-event-loop, thread-pool, process-pool, asyncio-gather, coroutines]
 ---
 # asyncio.to_thread

@@ -3,6 +3,7 @@ id: word-ladder-bfs
 title: Shortest Transformation (BFS)
 keywords: [word ladder, shortest transformation, implicit graph, bfs, word list, one letter change, transformation sequence, state space search, patterns, wildcard]
 category: Algorithms
+type: algo
 related: [bfs, grid-traversal, connected-components, graph-representation, dfs]
 ---
 # Shortest Transformation (BFS)

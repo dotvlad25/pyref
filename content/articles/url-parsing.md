@@ -3,6 +3,7 @@ id: url-parsing
 title: URL Parsing
 keywords: [urllib.parse, urlparse, urlsplit, urljoin, urlencode, urldefrag, parse_qs, parse_qsl, quote, unquote, query string, scheme, netloc, path, fragment, relative url, build url, crawler, ParseResult]
 category: Standard Library
+type: reference
 related: [json-module, csv-module]
 ---
 # URL Parsing

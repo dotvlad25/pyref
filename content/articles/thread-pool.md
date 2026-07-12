@@ -3,6 +3,7 @@ id: thread-pool
 title: ThreadPoolExecutor & concurrent.futures
 keywords: [threadpoolexecutor, concurrent.futures, executor, submit, map, future, as_completed, ProcessPoolExecutor, pool]
 category: Concurrency
+type: reference
 related: [threading-basics, queue-module, multiprocessing, asyncio-basics]
 ---
 # ThreadPoolExecutor & concurrent.futures

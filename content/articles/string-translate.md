@@ -3,6 +3,7 @@ id: string-translate
 title: str.translate & maketrans
 keywords: [translate, maketrans, str.maketrans, character mapping, delete chars, remove characters, replace multiple, char map, cleaning, sanitize, rot13, punctuation removal]
 category: Language
+type: reference
 related: [string-methods, ascii-ord-chr, string-basics, string-search]
 ---
 # str.translate & maketrans

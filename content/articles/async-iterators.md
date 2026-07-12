@@ -3,6 +3,7 @@ id: async-iterators
 title: Async Iterators & Generators
 keywords: [async for, async generator, async def yield, __aiter__, __anext__, StopAsyncIteration, async with, __aenter__, __aexit__, aclose, streaming, async comprehension]
 category: Concurrency
+type: reference
 related: [coroutines, asyncio-basics, asyncio-queue, taskgroup, event-loop]
 ---
 # Async Iterators & Generators

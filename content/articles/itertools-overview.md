@@ -3,6 +3,7 @@ id: itertools-overview
 title: itertools Overview
 keywords: [itertools, lazy iterators, generators, iterator building blocks, combinatorics, infinite iterators, memory efficient, standard library, iterator recipes]
 category: Standard Library
+type: reference
 related: [permutations-combinations, accumulate, groupby, chain-islice, count-cycle-repeat, starmap-compress]
 ---
 # itertools Overview

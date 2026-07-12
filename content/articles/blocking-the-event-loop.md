@@ -3,6 +3,7 @@ id: blocking-the-event-loop
 title: Blocking the Event Loop
 keywords: [blocking event loop, time.sleep, requests, freeze event loop, async blocking, asyncio.sleep, single thread, aiohttp, httpx, aiofiles, asyncpg, offload blocking, run_in_executor, to_thread, cpu bound async]
 category: Concurrency
+type: concept
 related: [asyncio-basics, asyncio-create-task, asyncio-to-thread, run-in-executor, event-loop, asyncio-debugging, gil]
 ---
 # Blocking the Event Loop

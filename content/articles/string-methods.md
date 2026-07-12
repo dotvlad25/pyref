@@ -3,6 +3,7 @@ id: string-methods
 title: Essential String Methods
 keywords: [string methods, strip, lstrip, rstrip, split, replace, find, startswith, endswith, lower, upper, isalpha, isdigit, isalnum, count, casefold, title, swapcase]
 category: Language
+type: reference
 related: [string-basics, string-split-join, string-search, string-formatting]
 ---
 # Essential String Methods

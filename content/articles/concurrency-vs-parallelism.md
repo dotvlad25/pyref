@@ -3,6 +3,7 @@ id: concurrency-vs-parallelism
 title: Concurrency vs Parallelism
 keywords: [concurrency, parallelism, interleaving, simultaneous, cores, gil, cpu bound, io bound, cpu-bound, io-bound, cooperative, preemptive, threading, multiprocessing, asyncio, single thread]
 category: Concurrency
+type: concept
 related: [gil, choosing-concurrency-model, multiprocessing, threading-basics, asyncio-basics, multiprocessing-start-methods]
 ---
 # Concurrency vs Parallelism

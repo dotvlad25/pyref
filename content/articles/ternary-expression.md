@@ -3,6 +3,7 @@ id: ternary-expression
 title: Ternary / Conditional Expression
 keywords: [ternary, conditional expression, inline if else, x if cond else y, nested ternary, one line if, default value, guard]
 category: Language
+type: reference
 related: [comprehensions, chained-comparisons, min-max-any-all]
 ---
 # Ternary / Conditional Expression

@@ -3,6 +3,7 @@ id: math-module
 title: math module
 keywords: [math, gcd, lcm, isqrt, sqrt, comb, perm, factorial, inf, nan, ceil, floor, prod, log, log2, pi, infinity, combinations, binomial]
 category: Standard Library
+type: reference
 related: [integer-arithmetic, random-module, bit-tricks, number-bases]
 ---
 # math module

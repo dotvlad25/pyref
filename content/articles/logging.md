@@ -3,6 +3,7 @@ id: logging
 title: logging Module
 keywords: [logging, logger, getLogger, basicConfig, log levels, debug info warning error critical, formatter, handler, log to file, structured logging, print vs logging, exc_info]
 category: Standard Library
+type: reference
 related: [debugging-concurrent-code, exception-handling, image-pipeline-progress, contextlib]
 ---
 # logging Module

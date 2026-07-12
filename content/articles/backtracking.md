@@ -3,6 +3,7 @@ id: backtracking
 title: Backtracking Template
 keywords: [backtracking, choose explore unchoose, subsets, permutations, combinations, combination sum, dfs recursion, path pop, prune, powerset]
 category: Algorithms
+type: pattern
 related: [recursion-memoization, dfs, matrix-patterns, set]
 ---
 # Backtracking Template

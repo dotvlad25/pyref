@@ -3,6 +3,7 @@ id: chained-comparisons
 title: Chained Comparisons
 keywords: [chained comparison, range check, 0 <= x < n, a == b == c, bounds check, between, comparison operators, in bounds, left to right]
 category: Language
+type: reference
 related: [ternary-expression, min-max-any-all, binary-search]
 ---
 # Chained Comparisons

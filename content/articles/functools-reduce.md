@@ -3,6 +3,7 @@ id: functools-reduce
 title: functools.reduce
 keywords: [functools, reduce, fold, foldl, accumulate, initializer, aggregate, running total, left fold]
 category: Standard Library
+type: reference
 related: [functools-cache, functools-partial, math-module, sorting-key]
 ---
 # functools.reduce

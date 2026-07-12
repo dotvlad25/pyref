@@ -3,6 +3,7 @@ id: min-max-any-all
 title: min, max, any, all
 keywords: [min, max, any, all, key argument, default, short circuit, reduce, count with sum, argmax, empty iterable, power builtins]
 category: Standard Library
+type: reference
 related: [sorting-key, generator-expressions, comprehensions, heapq]
 ---
 # min, max, any, all

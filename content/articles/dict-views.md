@@ -3,6 +3,7 @@ id: dict-views
 title: Dictionary View Objects
 keywords: [dict views, view object, "dict.keys()", "dict.values()", "dict.items()", keys, values, items, dynamic view, dict_keys, dict_values, dict_items, live view, snapshot, set operations]
 category: Data Structures
+type: reference
 related: [dict, set, frozenset, comprehensions, enumerate-zip]
 ---
 # Dictionary View Objects

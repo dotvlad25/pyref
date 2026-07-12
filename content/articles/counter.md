@@ -3,6 +3,7 @@ id: counter
 title: collections.Counter
 keywords: [counter, collections, frequency, count, most_common, elements, multiset, tally, anagram]
 category: Data Structures
+type: reference
 related: [dict, defaultdict, top-k]
 ---
 # collections.Counter

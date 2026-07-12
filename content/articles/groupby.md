@@ -3,6 +3,7 @@ id: groupby
 title: itertools.groupby
 keywords: [groupby, itertools, group consecutive, consecutive grouping, sort first, key function, run length encoding, adjacent, grouping, split runs]
 category: Standard Library
+type: reference
 related: [grouping, itertools-overview, sorting-key, defaultdict, counter]
 ---
 # itertools.groupby

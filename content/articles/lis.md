@@ -3,6 +3,7 @@ id: lis
 title: Longest Increasing Subsequence
 keywords: [lis, longest increasing subsequence, patience sorting, bisect, o(n log n), dp, leetcode 300, subsequence, tails]
 category: Algorithms
+type: algo
 related: [dp-intro, bisect, binary-search, lcs]
 ---
 # Longest Increasing Subsequence

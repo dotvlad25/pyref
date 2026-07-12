@@ -3,6 +3,7 @@ id: heap-tuples
 title: Heap with Tuples & Custom Priority
 keywords: [heap, tuple, priority, heapq, custom comparator, tie breaker, counter, dataclass, order]
 category: Data Structures
+type: pattern
 related: [heapq, top-k, dijkstra, sorting-key]
 ---
 # Heap with Tuples & Custom Priority

@@ -3,6 +3,7 @@ id: per-key-locking
 title: Per-Key Locking (Lock Granularity)
 keywords: [per key lock, per user lock, lock granularity, global lock, lock striping, double checked locking, lock map, contention, concurrent dict, thread safe cache, shard locks]
 category: Concurrency
+type: pattern
 related: [locks, race-conditions, rate-limiter, dict, defaultdict]
 ---
 # Per-Key Locking (Lock Granularity)

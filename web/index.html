@@ -20,6 +20,20 @@
         spellcheck="false"
       >
       <div id="status" class="status"></div>
+      <div class="type-filter" id="type-filter">
+        <button id="type-filter-btn" class="type-filter-btn" title="Choose which article types to show">Types ▾</button>
+        <div id="type-filter-menu" class="type-filter-menu" hidden>
+          <label><input type="checkbox" data-type="reference" checked> Reference</label>
+          <label><input type="checkbox" data-type="concept" checked> Concept</label>
+          <label><input type="checkbox" data-type="algo" checked> Algorithm</label>
+          <label><input type="checkbox" data-type="pattern" checked> Pattern</label>
+          <label><input type="checkbox" data-type="solution" checked> Solution</label>
+          <div class="type-filter-actions">
+            <button data-action="all">All</button>
+            <button data-action="none">None</button>
+          </div>
+        </div>
+      </div>
       <button id="hl-toggle" class="hl-toggle active" title="Toggle search-term highlighting in articles">✨ Highlight</button>
       <button id="play-btn" class="play-btn" title="Open playground (runs Python)">▶ Playground</button>
       <div class="theme-switch" id="theme-switch" role="group" aria-label="Theme">

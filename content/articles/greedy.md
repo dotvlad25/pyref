@@ -3,6 +3,7 @@ id: greedy
 title: Greedy Patterns
 keywords: [greedy, greedy algorithm, jump game, interval, activity selection, gas station, exchange argument, locally optimal, coin change greedy, when greedy works]
 category: Algorithms
+type: pattern
 related: [interval-scheduling, sorting-key, heapq, two-pointers]
 ---
 # Greedy Patterns

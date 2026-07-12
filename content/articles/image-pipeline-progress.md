@@ -3,6 +3,7 @@ id: image-pipeline-progress
 title: Bulk Image Pipeline (Progress & Logging)
 keywords: [progress, progress tracking, logging, as_completed, when to lock, thread-safe counter, main thread, tqdm, completed count, pipeline progress, no lock needed]
 category: Concurrency
+type: solution
 related: [image-pipeline-threadpool, logging, race-conditions, as-completed, locks, thread-pool]
 ---
 # Bulk Image Pipeline (Progress & Logging)

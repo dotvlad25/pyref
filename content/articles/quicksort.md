@@ -3,6 +3,7 @@ id: quicksort
 title: Quicksort
 keywords: [quicksort, quick sort, partition, pivot, in place, lomuto, hoare, divide and conquer, average n log n, worst case n squared, randomized pivot]
 category: Algorithms
+type: algo
 related: [mergesort, quickselect, sorting-key, binary-search]
 ---
 # Quicksort

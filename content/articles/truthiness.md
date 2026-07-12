@@ -3,6 +3,7 @@ id: truthiness
 title: Truthiness & Falsy Values
 keywords: [truthiness, falsy, truthy, empty container, bool, none, zero, empty string, or and short circuit, if not, default value, __bool__, __len__]
 category: Language
+type: concept
 related: [is-vs-equals, default-args-gotcha]
 ---
 # Truthiness & Falsy Values

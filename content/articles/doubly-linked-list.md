@@ -3,6 +3,7 @@ id: doubly-linked-list
 title: Doubly Linked List
 keywords: [doubly linked list, linked list, node, prev, next, sentinel, dummy head, O(1) removal, dll]
 category: Data Structures
+type: reference
 related: [lru-cache, linked-list, deque]
 ---
 # Doubly Linked List

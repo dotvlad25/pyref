@@ -3,6 +3,7 @@ id: trie
 title: Trie (Prefix Tree)
 keywords: [trie, prefix tree, autocomplete, startswith, insert, search, defaultdict, word dictionary, prefix]
 category: Data Structures
+type: reference
 related: [defaultdict, dfs, dict]
 ---
 # Trie (Prefix Tree)

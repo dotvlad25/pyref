@@ -3,6 +3,7 @@ id: decorators
 title: Function Decorators
 keywords: [decorator, wrapper, closure, higher-order function, wraps, timing, logging, instrumentation, syntactic sugar, decorate]
 category: Language
+type: reference
 related: [decorators-with-args, functools-wraps, functools-cache, contextlib]
 ---
 # Function Decorators

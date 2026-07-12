@@ -3,6 +3,7 @@ id: dict
 title: dict (Hash Map)
 keywords: [dict, dictionary, hash map, get, setdefault, pop, items, keys, values, update, comprehension, O(1)]
 category: Data Structures
+type: reference
 related: [defaultdict, counter, ordereddict, set]
 ---
 # dict (Hash Map)

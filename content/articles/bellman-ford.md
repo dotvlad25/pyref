@@ -3,6 +3,7 @@ id: bellman-ford
 title: Bellman-Ford
 keywords: [bellman ford, shortest path, negative edges, negative weights, negative cycle, relaxation, v minus 1, single source, cheapest flights]
 category: Algorithms
+type: algo
 related: [dijkstra, bfs, cycle-detection, graph-representation, topological-sort]
 ---
 # Bellman-Ford

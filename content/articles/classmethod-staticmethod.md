@@ -3,6 +3,7 @@ id: classmethod-staticmethod
 title: classmethod & staticmethod
 keywords: [classmethod, staticmethod, cls, self, alternative constructor, factory method, utility method, decorator, from_string, namespace]
 category: OOP
+type: reference
 related: [property, decorators, functools-cache]
 ---
 # classmethod & staticmethod

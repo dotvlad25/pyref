@@ -3,6 +3,7 @@ id: lru-cache
 title: LRU Cache
 keywords: [lru, cache, least recently used, ordereddict, doubly linked list, get, put, O(1), eviction]
 category: Data Structures
+type: algo
 related: [ordereddict, functools-cache, doubly-linked-list, dict]
 ---
 # LRU Cache

@@ -3,6 +3,7 @@ id: contextlib
 title: contextlib & @contextmanager
 keywords: [contextlib, contextmanager, generator, yield, suppress, ExitStack, closing, nullcontext, context manager, with, cleanup, decorator]
 category: Standard Library
+type: reference
 related: [context-managers, decorators, functools-wraps]
 ---
 # contextlib & @contextmanager

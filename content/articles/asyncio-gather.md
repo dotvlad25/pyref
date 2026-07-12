@@ -3,6 +3,7 @@ id: asyncio-gather
 title: asyncio.gather & Concurrent Tasks
 keywords: [asyncio, gather, create_task, concurrent, wait_for, timeout, cancel, TaskGroup, return_exceptions]
 category: Concurrency
+type: reference
 related: [asyncio-basics, asyncio-queue]
 ---
 # asyncio.gather & Concurrent Tasks

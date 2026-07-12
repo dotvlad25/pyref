@@ -3,6 +3,7 @@ id: barriers
 title: Barriers
 keywords: [barrier, threading.Barrier, wait, parties, synchronization point, checkpoint, rendezvous, phase, BrokenBarrierError, abort, action]
 category: Concurrency
+type: reference
 related: [semaphores, events, condition-variables, locks, threading-basics]
 ---
 # Barriers

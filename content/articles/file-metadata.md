@@ -3,6 +3,7 @@ id: file-metadata
 title: File Metadata (os.stat, os.path)
 keywords: [os.stat, stat, st_size, st_ino, inode, st_mtime, st_mode, file size, modification time, islink, isfile, isdir, exists, getsize, getmtime, hardlink, symlink, file metadata]
 category: Standard Library
+type: reference
 related: [os-path, os-walk, file-hashing, duplicate-finder, pathlib]
 ---
 # File Metadata (os.stat, os.path)

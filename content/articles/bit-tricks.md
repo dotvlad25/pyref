@@ -3,6 +3,7 @@ id: bit-tricks
 title: Common Bit Tricks
 keywords: [bit tricks, lowest set bit, x&-x, x&(x-1), Brian Kernighan, count set bits, popcount, bit_count, power of two, clear lowest bit, isolate bit, hamming weight]
 category: Algorithms
+type: pattern
 related: [bit-manipulation, number-bases, integer-arithmetic, math-module]
 ---
 # Common Bit Tricks

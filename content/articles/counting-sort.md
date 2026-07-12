@@ -3,6 +3,7 @@ id: counting-sort
 title: Counting Sort
 keywords: [counting sort, non comparison sort, bounded integers, O(n+k), stable, frequency count, radix sort building block, sort colors, bucket]
 category: Algorithms
+type: algo
 related: [bucket-sort, counter, sorting-key, top-k]
 ---
 # Counting Sort

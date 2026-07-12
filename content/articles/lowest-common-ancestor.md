@@ -3,6 +3,7 @@ id: lowest-common-ancestor
 title: Lowest Common Ancestor
 keywords: [lca, lowest common ancestor, common parent, ancestor, bst lca, binary tree lca, deepest common node]
 category: Algorithms
+type: algo
 related: [binary-tree, bst, tree-recursion-patterns, tree-traversal, dfs]
 ---
 # Lowest Common Ancestor

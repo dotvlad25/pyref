@@ -3,6 +3,7 @@ id: two-pointers
 title: Two Pointers
 keywords: [two pointers, opposite ends, fast slow, two sum sorted, palindrome, partition, in place, dutch flag]
 category: Patterns
+type: pattern
 related: [sliding-window, binary-search, sorting-key]
 ---
 # Two Pointers

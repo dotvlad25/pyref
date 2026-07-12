@@ -3,6 +3,7 @@ id: set
 title: set & frozenset
 keywords: [set, frozenset, add, discard, remove, union, intersection, difference, membership, dedup, O(1), subset]
 category: Data Structures
+type: reference
 related: [dict, counter, defaultdict]
 ---
 # set & frozenset

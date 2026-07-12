@@ -3,6 +3,7 @@ id: kadane
 title: Kadane's Max Subarray
 keywords: [kadane, maximum subarray, max subarray sum, contiguous, running max, dp, leetcode 53, best subarray, current sum]
 category: Algorithms
+type: algo
 related: [dp-intro, sliding-window, two-pointers, house-robber]
 ---
 # Kadane's Max Subarray

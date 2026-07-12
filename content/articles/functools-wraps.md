@@ -3,6 +3,7 @@ id: functools-wraps
 title: functools.wraps
 keywords: [functools, wraps, decorator, __name__, __doc__, docstring, metadata, update_wrapper, __wrapped__, introspection]
 category: Standard Library
+type: reference
 related: [decorators, decorators-with-args, functools-cache]
 ---
 # functools.wraps

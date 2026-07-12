@@ -3,6 +3,7 @@ id: default-args-gotcha
 title: Mutable Default Argument Gotcha
 keywords: [mutable default argument, "def f(x=[])", shared default, None sentinel, list default, dict default, default parameter bug, evaluated once]
 category: Language
+type: concept
 related: [closures, args-kwargs, nested-functions]
 ---
 # Mutable Default Argument Gotcha

@@ -3,6 +3,7 @@ id: asyncio-debugging
 title: Debugging asyncio
 keywords: [asyncio debug, debug mode, PYTHONASYNCIODEBUG, debug=True, never awaited, coroutine was never awaited, slow callback, task took too long, blocking detection, asyncio troubleshooting, runtimewarning]
 category: Concurrency
+type: concept
 related: [asyncio-basics, blocking-the-event-loop, asyncio-create-task, event-loop, debugging-concurrent-code, asyncio-cancellation]
 ---
 # Debugging asyncio

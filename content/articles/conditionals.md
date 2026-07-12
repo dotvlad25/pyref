@@ -3,6 +3,7 @@ id: conditionals
 title: "Conditionals: if / elif / else"
 keywords: [if, elif, else, if else, else if, conditional, branch, branching, switch, no switch, match, colon, indentation, block, ternary, control flow]
 category: Language
+type: reference
 related: [loops, truthiness, ternary-expression, chained-comparisons, exception-handling]
 ---
 # Conditionals: if / elif / else

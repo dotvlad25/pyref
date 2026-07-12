@@ -3,6 +3,7 @@ id: event-loop
 title: The Event Loop
 keywords: [event loop, asyncio.run, get_running_loop, get_event_loop, run_until_complete, call_soon, call_later, scheduling, single thread, loop, runner]
 category: Concurrency
+type: concept
 related: [asyncio-basics, coroutines, taskgroup, run-in-executor, gil]
 ---
 # The Event Loop

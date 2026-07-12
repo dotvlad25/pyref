@@ -3,6 +3,7 @@ id: ascii-ord-chr
 title: ord, chr & ASCII
 keywords: [ord, chr, ascii, unicode code point, char to int, int to char, frequency array, a-z index, alphabet, caesar cipher, shift, digit to int, count array]
 category: Language
+type: reference
 related: [string-basics, string-methods, counter, string-formatting]
 ---
 # ord, chr & ASCII

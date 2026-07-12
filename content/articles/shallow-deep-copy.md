@@ -3,6 +3,7 @@ id: shallow-deep-copy
 title: "Copy: Shallow vs Deep"
 keywords: [copy, deepcopy, shallow copy, deep copy, aliasing, clone, reference, mutation, backtracking, path copy, copy module, nested]
 category: Language
+type: concept
 related: [2d-grid, list-slicing, list-basics, dfs, recursion-memoization]
 ---
 # Copy: Shallow vs Deep

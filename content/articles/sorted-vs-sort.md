@@ -3,6 +3,7 @@ id: sorted-vs-sort
 title: "sorted() vs .sort() and Timsort Stability"
 keywords: [sorted, sort, list.sort, in-place sort, timsort, stable sort, stability, returns none, reverse, sort key, order n log n, new list]
 category: Language
+type: reference
 related: [sorting-key, cmp-to-key, list-methods, iterables]
 ---
 # sorted() vs .sort() and Timsort Stability

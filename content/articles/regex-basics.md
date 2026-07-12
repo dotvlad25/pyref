@@ -3,6 +3,7 @@ id: regex-basics
 title: re Module Basics
 keywords: [regex, regular expression, re module, raw string, r-string, metacharacters, character class, escape, backslash, wildcard, quantifier, anchor, pattern]
 category: Standard Library
+type: reference
 related: [regex-search-match, regex-findall-sub, regex-groups, regex-compile, regex-common-patterns]
 ---
 # re Module Basics

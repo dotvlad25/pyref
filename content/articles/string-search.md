@@ -3,6 +3,7 @@ id: string-search
 title: Substring Search
 keywords: [substring, search, in operator, find, index, rfind, rindex, count, contains, startswith, endswith, membership, locate, first occurrence, last occurrence]
 category: Language
+type: reference
 related: [string-methods, string-split-join, string-basics]
 ---
 # Substring Search

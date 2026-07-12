@@ -3,6 +3,7 @@ id: string-split-join
 title: split & join
 keywords: [split, join, splitlines, rsplit, maxsplit, partition, rpartition, tokenize, parse, whitespace split, csv, join idiom, delimiter]
 category: Language
+type: reference
 related: [string-basics, string-methods, string-search, string-translate]
 ---
 # split & join

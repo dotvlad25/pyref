@@ -3,6 +3,7 @@ id: sorting-key
 title: Sorting with key & Custom Comparators
 keywords: [sort, sorted, key, lambda, reverse, multi key, cmp_to_key, itemgetter, attrgetter, stable sort, negation trick]
 category: Standard Library
+type: reference
 related: [heap-tuples, bisect, two-pointers]
 ---
 # Sorting with key & Custom Comparators

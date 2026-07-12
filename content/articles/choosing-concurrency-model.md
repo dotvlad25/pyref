@@ -3,6 +3,7 @@ id: choosing-concurrency-model
 title: Choosing a Concurrency Model
 keywords: [choosing concurrency, threading vs multiprocessing vs asyncio, decision guide, cpu bound, io bound, cpu-bound, io-bound, gil, thread pool, process pool, event loop, blocking, synchronous library, aiohttp, requests, hybrid, tradeoffs, which to use]
 category: Concurrency
+type: concept
 related: [gil, concurrency-vs-parallelism, threading-basics, thread-pool, multiprocessing, process-pool, asyncio-basics, run-in-executor, asyncio-to-thread, blocking-the-event-loop]
 ---
 # Choosing a Concurrency Model

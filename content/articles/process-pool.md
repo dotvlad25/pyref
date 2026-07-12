@@ -3,6 +3,7 @@ id: process-pool
 title: "ProcessPoolExecutor"
 keywords: [ProcessPoolExecutor, concurrent.futures, cpu-bound, parallelism, multiprocessing, map, submit, max_workers, gil bypass, pickle, ipc, future, executor]
 category: Concurrency
+type: reference
 related: [thread-pool, multiprocessing, multiprocessing-shared-state, gil, concurrency-vs-parallelism, choosing-concurrency-model, future-objects, asyncio-to-thread]
 ---
 # ProcessPoolExecutor

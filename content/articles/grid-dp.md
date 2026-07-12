@@ -3,6 +3,7 @@ id: grid-dp
 title: Grid Path DP
 keywords: [grid dp, unique paths, min path sum, matrix dp, robot paths, 2d dp, rolling row, leetcode 62, leetcode 64, dungeon]
 category: Algorithms
+type: algo
 related: [dp-intro, edit-distance, coin-change]
 ---
 # Grid Path DP

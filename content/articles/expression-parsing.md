@@ -3,6 +3,7 @@ id: expression-parsing
 title: Stack-Based Expression Parsing
 keywords: [expression parsing, tokenize, tokenizer, evaluate expression, balanced brackets, valid parentheses, calculator, operator precedence, shunting yard, stack, infix, postfix, RPN]
 category: Algorithms
+type: pattern
 related: [stack, regex-basics, regex-findall-sub, trie]
 ---
 # Stack-Based Expression Parsing

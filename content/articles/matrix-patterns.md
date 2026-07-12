@@ -3,6 +3,7 @@ id: matrix-patterns
 title: Matrix Manipulation
 keywords: [matrix, 2d list, grid, rotate image, transpose, spiral traversal, spiral order, in place rotation, zip star, reverse rows, set matrix zeroes, direction arrays]
 category: Data Structures
+type: pattern
 related: [prefix-sum, backtracking, bfs, dfs, graph-representation]
 ---
 # Matrix Manipulation

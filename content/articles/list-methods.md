@@ -3,6 +3,7 @@ id: list-methods
 title: Essential List Methods
 keywords: [list methods, sort, sorted, reverse, reversed, index, count, extend, append, remove, pop, insert, clear, in place, returns none]
 category: Data Structures
+type: reference
 related: [list-basics, sorting-key, reversing-sequences, list-slicing, counter]
 ---
 # Essential List Methods

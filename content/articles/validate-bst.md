@@ -3,6 +3,7 @@ id: validate-bst
 title: Validate a BST
 keywords: [validate bst, is valid bst, min max bounds, bst property, verify bst, inorder check, sorted check, range recursion]
 category: Algorithms
+type: algo
 related: [bst, tree-traversal, tree-recursion-patterns, binary-tree, lowest-common-ancestor]
 ---
 # Validate a BST

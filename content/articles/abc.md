@@ -3,6 +3,7 @@ id: abc
 title: Abstract Base Classes
 keywords: [abc, abstract base class, ABC, abstractmethod, ABCMeta, interface, abstractproperty, cannot instantiate, subclass, register, protocol]
 category: OOP
+type: reference
 related: [classes, magic-methods, type-hints, dataclasses]
 ---
 # Abstract Base Classes

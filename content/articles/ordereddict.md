@@ -3,6 +3,7 @@ id: ordereddict
 title: OrderedDict
 keywords: [ordereddict, collections, move_to_end, popitem, insertion order, lru, ordered dictionary]
 category: Data Structures
+type: reference
 related: [lru-cache, dict, defaultdict, counter]
 ---
 # OrderedDict

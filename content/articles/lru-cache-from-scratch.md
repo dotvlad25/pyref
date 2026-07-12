@@ -3,6 +3,7 @@ id: lru-cache-from-scratch
 title: LRU Cache From Scratch
 keywords: [lru cache, least recently used, leetcode 146, hash map plus doubly linked list, o(1) get put, eviction, dll, sentinel nodes, ordereddict alternative]
 category: Data Structures
+type: algo
 related: [doubly-linked-list, ordereddict, lru-cache, functools-cache, dict, hashable-objects]
 ---
 # LRU Cache From Scratch

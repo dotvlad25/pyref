@@ -3,6 +3,7 @@ id: regex-search-match
 title: search vs match vs fullmatch
 keywords: [re.search, re.match, re.fullmatch, anchoring, anchor, start of string, match object, group, span, none, first match]
 category: Standard Library
+type: reference
 related: [regex-basics, regex-findall-sub, regex-groups, regex-compile]
 ---
 # search vs match vs fullmatch

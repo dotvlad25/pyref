@@ -3,6 +3,7 @@ id: bipartite
 title: Bipartite Check
 keywords: [bipartite, two coloring, 2-coloring, graph coloring, bfs, odd cycle, possible bipartition, is graph bipartite, red blue, two sets]
 category: Algorithms
+type: algo
 related: [bfs, dfs, connected-components, cycle-detection, graph-representation]
 ---
 # Bipartite Check

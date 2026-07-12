@@ -3,6 +3,7 @@ id: starmap-compress
 title: starmap, compress, filterfalse
 keywords: [starmap, compress, filterfalse, itertools, map unpack, apply over tuples, boolean mask, inverse filter, filter false, splat, star args, dropwhile, takewhile]
 category: Standard Library
+type: reference
 related: [itertools-overview, count-cycle-repeat, chain-islice]
 ---
 # starmap, compress, filterfalse

@@ -3,6 +3,7 @@ id: search-rotated-array
 title: Search in Rotated Sorted Array
 keywords: [search rotated sorted array, rotated array, leetcode 33, binary search variant, pivot, which half is sorted, find minimum rotated, o(log n)]
 category: Algorithms
+type: algo
 related: [binary-search, binary-search-answer, bisect, two-pointers]
 ---
 # Search in Rotated Sorted Array

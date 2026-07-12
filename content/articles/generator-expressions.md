@@ -3,6 +3,7 @@ id: generator-expressions
 title: Generator Expressions
 keywords: [generator expression, lazy evaluation, genexp, next, memory, sum gen, iterator, exhausted, one pass, stopiteration, streaming]
 category: Language
+type: reference
 related: [comprehensions, min-max-any-all, walrus-operator]
 ---
 # Generator Expressions

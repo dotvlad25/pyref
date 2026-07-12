@@ -3,6 +3,7 @@ id: random-module
 title: random module
 keywords: [random, randint, randrange, random, uniform, choice, choices, shuffle, sample, seed, weights, reproducible, pick random, secrets]
 category: Standard Library
+type: reference
 related: [math-module, integer-arithmetic]
 ---
 # random module

@@ -3,6 +3,7 @@ id: reversing-sequences
 title: Reversing Sequences
 keywords: [reverse, reversed, slice reverse, in place reverse, "[::-1]", iterator, string reverse, list reverse, backwards, descending]
 category: Language
+type: reference
 related: [list-slicing, list-methods, list-basics, two-pointers, sorting-key]
 ---
 # Reversing Sequences

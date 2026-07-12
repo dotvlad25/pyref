@@ -3,6 +3,7 @@ id: cyclic-sort
 title: Cyclic Sort
 keywords: [cyclic sort, missing number, duplicate number, find all missing, find all duplicates, numbers 1 to n, in place, index as hash, first missing positive, set the swap]
 category: Algorithms
+type: algo
 related: [two-pointers, sorting-key, set, prefix-sum]
 ---
 # Cyclic Sort

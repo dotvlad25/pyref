@@ -3,6 +3,7 @@ id: bit-manipulation
 title: Bit Manipulation Basics
 keywords: [bit manipulation, bitwise, AND, OR, XOR, NOT, shift, left shift, right shift, mask, set bit, clear bit, toggle bit, get bit, binary]
 category: Language
+type: reference
 related: [bit-tricks, number-bases, integer-arithmetic, math-module]
 ---
 # Bit Manipulation Basics

@@ -3,6 +3,7 @@ id: array-module
 title: array module
 keywords: [array, array module, typed array, compact array, typecode, memory, buffer, numeric, bytes, fromlist, tobytes, list vs array]
 category: Standard Library
+type: reference
 related: [list-basics, list-methods, list-slicing]
 ---
 # array module

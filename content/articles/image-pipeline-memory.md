@@ -3,6 +3,7 @@ id: image-pipeline-memory
 title: Bulk Image Pipeline (Memory-Bounded)
 keywords: [memory, large images, 4000x4000, memory budget, bounded concurrency, peak memory, Image.open context manager, close promptly, lazy load, Image.draft, out of memory, streaming, per image footprint]
 category: Concurrency
+type: solution
 related: [image-pipeline-threadpool, bounded-concurrency, image-pipeline-progress, thread-pool, gil]
 ---
 # Bulk Image Pipeline (Memory-Bounded)

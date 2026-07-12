@@ -3,6 +3,7 @@ id: is-vs-equals
 title: is vs == & Integer Caching
 keywords: [is vs equals, identity, equality, is operator, small int cache, integer caching, string interning, is none, id(), same object, reference comparison]
 category: Language
+type: concept
 related: [truthiness, dict]
 ---
 # is vs == & Integer Caching

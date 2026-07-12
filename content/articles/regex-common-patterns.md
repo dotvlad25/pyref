@@ -3,6 +3,7 @@ id: regex-common-patterns
 title: Common Regex Patterns
 keywords: [regex patterns, email regex, phone, digits, integer, float, whitespace, word boundary, \b, url, ip address, hex, split on whitespace, trim, validation]
 category: Standard Library
+type: reference
 related: [regex-basics, regex-search-match, regex-findall-sub, regex-groups, regex-compile]
 ---
 # Common Regex Patterns

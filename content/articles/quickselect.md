@@ -3,6 +3,7 @@ id: quickselect
 title: Quickselect
 keywords: [quickselect, quick select, kth largest, kth smallest, selection algorithm, partition, pivot, average O(n), median, top k, nth element]
 category: Algorithms
+type: algo
 related: [quicksort, top-k, heapq, heap-tuples]
 ---
 # Quickselect

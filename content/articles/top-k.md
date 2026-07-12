@@ -3,6 +3,7 @@ id: top-k
 title: Top-K Elements
 keywords: [top k, k largest, k smallest, k most frequent, heapq, nlargest, counter, quickselect, kth largest]
 category: Patterns
+type: pattern
 related: [heapq, heap-tuples, counter, sorting-key]
 ---
 # Top-K Elements

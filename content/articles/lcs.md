@@ -3,6 +3,7 @@ id: lcs
 title: Longest Common Subsequence
 keywords: [lcs, longest common subsequence, 2d dp table, string dp, diff, edit distance cousin, leetcode 1143, subsequence]
 category: Algorithms
+type: algo
 related: [dp-intro, edit-distance, lis, knapsack]
 ---
 # Longest Common Subsequence

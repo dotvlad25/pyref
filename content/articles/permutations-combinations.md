@@ -3,6 +3,7 @@ id: permutations-combinations
 title: permutations, combinations, product
 keywords: [permutations, combinations, product, itertools, combinatorics, cartesian product, combinations_with_replacement, nested loops, r, choose, orderings, subsets]
 category: Standard Library
+type: reference
 related: [itertools-overview, recursion-memoization, dfs, chain-islice]
 ---
 # permutations, combinations, product

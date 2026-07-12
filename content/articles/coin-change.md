@@ -3,6 +3,7 @@ id: coin-change
 title: Coin Change
 keywords: [coin change, min coins, fewest coins, number of ways, count combinations, unbounded knapsack, dp, leetcode 322, leetcode 518, cache]
 category: Algorithms
+type: algo
 related: [dp-intro, knapsack, functools-cache, recursion-memoization]
 ---
 # Coin Change

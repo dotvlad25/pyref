@@ -73,6 +73,8 @@ let current = [];         // current result list (array of index records)
 let activeIdx = -1;       // highlighted result index
 let currentId = null;     // id of the article currently rendered
 let currentQuery = "";    // latest search query (for highlighting in the article)
+const ALL_TYPES = ["reference", "concept", "algo", "pattern", "solution"];
+let enabledTypes = new Set(ALL_TYPES);   // which article types are shown
 let renderedQuery = "";   // query that was actually highlighted in the shown article
 let highlightEnabled = true;  // toggle: highlight search terms in the article body
 const bodyCache = new Map();
@@ -121,9 +123,11 @@ async function init() {
     extractField: (doc, field) =>
       field === "keywords" ? (doc.keywords || []).join(" ") : (doc[field] || ""),
     searchOptions: {
-      boost: { title: 4, keywords: 3, category: 1 },
+      boost: { title: 5, keywords: 3, category: 1 },
       prefix: true,
       fuzzy: 0.2,           // light fuzzy: ~1-2 char typos (tread -> thread)
+      // Rank exact term matches highest, then prefix, then fuzzy.
+      weights: { fuzzy: 0.4, prefix: 0.7 },
       combineWith: "AND",
     },
   });
@@ -134,6 +138,7 @@ async function init() {
   configureMarked();
   bindEvents();
   initHighlightToggle();
+  initTypeFilter();
   showBrowseAll();
 
   // Route from the URL hash: open a bookmarked/refreshed article, else focus search.
@@ -167,27 +172,81 @@ function highlightCode(root) {
 
 /* ---------- Search ---------- */
 
+// Keep only articles whose type is currently enabled. Unknown/missing type
+// counts as "reference" (the build default).
+function applyRefFilter(list) {
+  if (enabledTypes.size === ALL_TYPES.length) return list;   // all on -> no filtering
+  return list.filter((a) => enabledTypes.has(a.type || "reference"));
+}
+
 function runSearch(q) {
   q = q.trim();
   currentQuery = q;
   if (!q) { showBrowseAll(); return; }
 
   const hits = mini.search(q);
-  current = hits.map((h) => byId.get(h.id)).filter(Boolean);
+  // Re-rank for "aboutness": exact id/title matches beat incidental mentions.
+  const scored = hits
+    .map((h) => {
+      const a = byId.get(h.id);
+      if (!a) return null;
+      return { a, score: h.score + aboutnessBonus(a, q) };
+    })
+    .filter(Boolean)
+    .sort((x, y) => y.score - x.score);
+
+  current = applyRefFilter(scored.map((s) => s.a));
   activeIdx = current.length ? 0 : -1;
   renderResults(`${current.length} result${current.length === 1 ? "" : "s"}`);
   if (activeIdx >= 0) openArticle(current[0].id, false);   // auto-open: no history entry
 }
 
+// Normalize to compare across spellings: "ThreadPool" ~ "thread pool" ~ "thread-pool".
+function normKey(s) {
+  return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+// Reward articles that are ABOUT the query, not just containing it.
+function aboutnessBonus(a, q) {
+  const nq = normKey(q);
+  if (!nq) return 0;
+  let bonus = 0;
+  const nid = normKey(a.id);
+  const ntitle = normKey(a.title);
+
+  if (nid === nq || ntitle === nq) bonus += 1000;          // exact hit -> always first
+  else {
+    if (ntitle.startsWith(nq)) bonus += 500;               // title prefix
+    // whole-word match in the title
+    const words = a.title.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+    if (words.includes(q.toLowerCase())) bonus += 200;
+    // exact keyword match
+    if ((a.keywords || []).some((k) => normKey(k) === nq)) bonus += 120;
+  }
+  // Small tiebreak: prefer conceptual reference over applied solutions.
+  if (a.type === "reference" || a.type === "concept") bonus += 15;
+  return bonus;
+}
+
 function showBrowseAll() {
   // No query: list everything, grouped feel via category label.
   currentQuery = "";
-  current = Array.from(byId.values()).sort((a, b) => a.title.localeCompare(b.title));
+  current = applyRefFilter(
+    Array.from(byId.values()).sort((a, b) => a.title.localeCompare(b.title))
+  );
   activeIdx = -1;
   renderResults(`${current.length} articles`);
 }
 
 /* ---------- Rendering ---------- */
+
+// A small colored badge for an article's type.
+function typeBadge(type) {
+  const t = type || "reference";
+  const label = { reference: "REF", concept: "CONCEPT", algo: "ALGO",
+                  pattern: "PATTERN", solution: "SOLUTION" }[t] || t.toUpperCase();
+  return `<span class="type-badge type-${escapeHtml(t)}">${label}</span>`;
+}
 
 function renderResults(statusText) {
   els.status.textContent = statusText;
@@ -199,7 +258,7 @@ function renderResults(statusText) {
     .map((a, i) => {
       const kw = (a.keywords || []).slice(0, 5).join(" · ");
       return `<div class="result ${i === activeIdx ? "active" : ""}" data-idx="${i}" data-id="${a.id}">
-        <div class="r-title">${escapeHtml(a.title)}</div>
+        <div class="r-title">${escapeHtml(a.title)} ${typeBadge(a.type)}</div>
         <div class="r-cat">${escapeHtml(a.category)}</div>
         ${kw ? `<div class="r-kw">${escapeHtml(kw)}</div>` : ""}
       </div>`;
@@ -271,7 +330,7 @@ function renderArticle(data) {
 
   els.article.innerHTML = `
     <h1>${escapeHtml(data.title)}</h1>
-    <div class="article-meta"><span class="cat">${escapeHtml(data.category)}</span></div>
+    <div class="article-meta"><span class="cat">${escapeHtml(data.category)}</span> ${typeBadge((byId.get(data.id) || {}).type)}</div>
     <div class="article-body">${marked.parse(body)}</div>
     ${related ? `<div class="related"><h3>Related</h3>${related}</div>` : ""}
   `;
@@ -314,6 +373,64 @@ function initHighlightToggle() {
     try { localStorage.setItem("pyref-highlight", highlightEnabled ? "on" : "off"); } catch {}
     refreshHighlights();     // apply immediately to the open article
   });
+}
+
+function initTypeFilter() {
+  const wrap = document.getElementById("type-filter");
+  const btn = document.getElementById("type-filter-btn");
+  const menu = document.getElementById("type-filter-menu");
+  if (!wrap || !btn || !menu) return;
+
+  const boxes = [...menu.querySelectorAll("input[data-type]")];
+
+  // Restore saved selection.
+  try {
+    const saved = JSON.parse(localStorage.getItem("pyref-types") || "null");
+    if (Array.isArray(saved) && saved.length) enabledTypes = new Set(saved);
+  } catch {}
+
+  const syncUI = () => {
+    boxes.forEach((b) => { b.checked = enabledTypes.has(b.dataset.type); });
+    // Label reflects state: "Types" (all) or "Types (3)" when filtered.
+    const n = enabledTypes.size;
+    btn.textContent = n === ALL_TYPES.length ? "Types ▾" : `Types (${n}) ▾`;
+    btn.classList.toggle("active", n !== ALL_TYPES.length);
+  };
+
+  const commit = () => {
+    try { localStorage.setItem("pyref-types", JSON.stringify([...enabledTypes])); } catch {}
+    syncUI();
+    runSearch(els.search.value);   // re-run current view with the new filter
+  };
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.hidden = !menu.hidden;
+  });
+
+  menu.addEventListener("click", (e) => e.stopPropagation());
+
+  boxes.forEach((b) =>
+    b.addEventListener("change", () => {
+      if (b.checked) enabledTypes.add(b.dataset.type);
+      else enabledTypes.delete(b.dataset.type);
+      if (enabledTypes.size === 0) enabledTypes.add(b.dataset.type), (b.checked = true); // never empty
+      commit();
+    })
+  );
+
+  menu.querySelector('[data-action="all"]').addEventListener("click", () => {
+    enabledTypes = new Set(ALL_TYPES); commit();
+  });
+  menu.querySelector('[data-action="none"]').addEventListener("click", () => {
+    enabledTypes = new Set(["reference"]); commit();   // "none" keeps reference as the useful floor
+  });
+
+  // Close on outside click / Escape.
+  document.addEventListener("click", () => { menu.hidden = true; });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") menu.hidden = true; });
+
+  syncUI();
 }
 
 // Wrap occurrences of each query term in <mark> across text nodes (works inside

@@ -3,6 +3,7 @@ id: grid-traversal
 title: Grid/Matrix Traversal
 keywords: [grid, matrix, 2d array, islands, number of islands, flood fill, dfs, bfs, direction array, neighbors, four directions, eight directions, in bounds, visited]
 category: Algorithms
+type: pattern
 related: [bfs, dfs, connected-components, union-find, word-ladder-bfs]
 ---
 # Grid/Matrix Traversal

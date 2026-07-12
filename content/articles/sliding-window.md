@@ -3,6 +3,7 @@ id: sliding-window
 title: Sliding Window
 keywords: [sliding window, two pointers, subarray, substring, longest, minimum, variable window, fixed window, deque]
 category: Patterns
+type: pattern
 related: [two-pointers, deque, counter]
 ---
 # Sliding Window

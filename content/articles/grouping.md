@@ -3,6 +3,7 @@ id: grouping
 title: Grouping Items by Key
 keywords: [grouping, group by, defaultdict, group items, bucket, partition, setdefault, key function, invert dict, group by size, group anagrams, collect by key]
 category: Patterns
+type: pattern
 related: [defaultdict, dict, counter, groupby, sorting-key]
 ---
 # Grouping Items by Key

@@ -3,6 +3,7 @@ id: list-slicing
 title: List Slicing
 keywords: [slice, slicing, start stop step, negative index, reverse, copy, sublist, stride, step, colon, "seq[::-1]", "seq[:]"]
 category: Language
+type: reference
 related: [list-basics, reversing-sequences, shallow-deep-copy, list-methods, two-pointers]
 ---
 # List Slicing

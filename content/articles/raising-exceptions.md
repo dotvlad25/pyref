@@ -3,6 +3,7 @@ id: raising-exceptions
 title: Raising & Chaining Exceptions
 keywords: [raise, raise from, re-raise, exception chaining, __cause__, __context__, from None, bare raise, reraise, wrap exception, suppress context]
 category: Language
+type: reference
 related: [exception-handling, custom-exceptions]
 ---
 # Raising & Chaining Exceptions

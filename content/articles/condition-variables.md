@@ -3,6 +3,7 @@ id: condition-variables
 title: Condition Variables
 keywords: [condition, condition variable, threading.Condition, wait, notify, notify_all, predicate loop, spurious wakeup, wait_for, signalling, wait notify]
 category: Concurrency
+type: reference
 related: [locks, events, producer-consumer, asyncio-queue, queue-module, semaphores]
 ---
 # Condition Variables

@@ -3,6 +3,7 @@ id: binary-tree
 title: Binary Tree Basics
 keywords: [binary tree, treenode, tree node, node class, build tree, height, depth, max depth, count nodes, leaf, subtree]
 category: Data Structures
+type: reference
 related: [tree-traversal, tree-level-order, tree-recursion-patterns, bst, dfs, recursion-memoization]
 ---
 # Binary Tree Basics

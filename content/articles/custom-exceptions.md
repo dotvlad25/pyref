@@ -3,6 +3,7 @@ id: custom-exceptions
 title: Custom Exceptions
 keywords: [custom exception, subclass Exception, exception hierarchy, user-defined error, base exception, raise, __init__ exception, error class]
 category: Language
+type: reference
 related: [exception-handling, raising-exceptions]
 ---
 # Custom Exceptions

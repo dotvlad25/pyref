@@ -3,6 +3,7 @@ id: binary-search
 title: Binary Search (Template)
 keywords: [binary search, template, sorted, lo hi mid, search, O(log n), first true, boundary, invariant]
 category: Patterns
+type: algo
 related: [bisect, sorting-key]
 ---
 # Binary Search (Template)

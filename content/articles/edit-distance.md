@@ -3,6 +3,7 @@ id: edit-distance
 title: Edit Distance
 keywords: [edit distance, levenshtein, string dp, insert delete replace, min operations, 2d dp, leetcode 72, spell check]
 category: Algorithms
+type: algo
 related: [dp-intro, lcs, grid-dp]
 ---
 # Edit Distance

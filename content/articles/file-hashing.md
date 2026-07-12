@@ -3,6 +3,7 @@ id: file-hashing
 title: File Hashing
 keywords: [hashlib, sha256, md5, sha1, hexdigest, digest, checksum, hash file, chunked hash, update, file integrity, deduplication, dedupe, blake2b, file_digest]
 category: Standard Library
+type: reference
 related: [duplicate-finder, file-chunking, file-io, os-walk]
 ---
 # File Hashing

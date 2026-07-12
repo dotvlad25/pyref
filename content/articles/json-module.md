@@ -3,6 +3,7 @@ id: json-module
 title: JSON Serialization
 keywords: [json, dumps, loads, dump, load, indent, sort_keys, default, object_hook, ensure_ascii, serialize, deserialize, encode, decode, JSONDecodeError, datetime, custom encoder, parse json, pretty print]
 category: Standard Library
+type: reference
 related: [csv-module, file-io, url-parsing]
 ---
 # JSON Serialization

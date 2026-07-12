@@ -3,6 +3,7 @@ id: valid-parentheses
 title: "Valid Parentheses (Bracket Matching)"
 keywords: [valid parentheses, balanced brackets, bracket matching, matching parentheses, stack, push pop, nested brackets, well formed, expression validation, lifo]
 category: Algorithms
+type: algo
 related: [stack, expression-parsing, monotonic-stack, string-basics, dict]
 ---
 # Valid Parentheses (Bracket Matching)

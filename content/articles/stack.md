@@ -3,6 +3,7 @@ id: stack
 title: Stack (LIFO)
 keywords: [stack, LIFO, push, pop, append, list as stack, monotonic stack, balanced parentheses, call stack]
 category: Data Structures
+type: reference
 related: [deque, queue-module, dfs, doubly-linked-list, stack-diffing]
 ---
 # Stack (LIFO)

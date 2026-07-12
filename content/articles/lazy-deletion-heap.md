@@ -3,6 +3,7 @@ id: lazy-deletion-heap
 title: Lazy Deletion in Heaps
 keywords: [lazy deletion, heap, heapq, decrease-key, delete from heap, remove arbitrary, heappushpop, heapreplace, invalidate, stale entry, priority queue update, sliding window, task scheduler]
 category: Algorithms
+type: pattern
 related: [heapq, heap-tuples, top-k, merge-k-sorted-lists, two-heap-median, dijkstra, sliding-window]
 ---
 # Lazy Deletion in Heaps

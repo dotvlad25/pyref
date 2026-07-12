@@ -3,6 +3,7 @@ id: decorators-with-args
 title: Decorators with Arguments
 keywords: [decorator, decorator factory, parametrized decorator, arguments, three-level nesting, closure, retry, repeat, wraps]
 category: Language
+type: reference
 related: [decorators, functools-wraps, functools-cache]
 ---
 # Decorators with Arguments

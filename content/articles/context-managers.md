@@ -3,6 +3,7 @@ id: context-managers
 title: Context Managers (with)
 keywords: [context manager, with statement, __enter__, __exit__, resource, cleanup, RAII, file, lock, setup teardown, as, try finally]
 category: OOP
+type: reference
 related: [contextlib, decorators, property]
 ---
 # Context Managers (with)

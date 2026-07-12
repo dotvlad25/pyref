@@ -3,6 +3,7 @@ id: dijkstra
 title: Dijkstra's Shortest Path
 keywords: [dijkstra, shortest path, weighted graph, priority queue, heapq, distances, greedy, relaxation]
 category: Algorithms
+type: algo
 related: [heapq, heap-tuples, bfs, graph-representation]
 ---
 # Dijkstra's Shortest Path

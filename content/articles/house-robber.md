@@ -3,6 +3,7 @@ id: house-robber
 title: House Robber
 keywords: [house robber, linear dp, rolling variables, non-adjacent, max sum no two adjacent, leetcode 198, leetcode 213, circular, dp]
 category: Algorithms
+type: algo
 related: [dp-intro, kadane, knapsack]
 ---
 # House Robber

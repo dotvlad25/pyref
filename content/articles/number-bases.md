@@ -3,6 +3,7 @@ id: number-bases
 title: Number Bases
 keywords: [number bases, binary, hexadecimal, octal, bin, hex, oct, int base, base conversion, format, radix, parse binary, 0x, 0b, 0o]
 category: Language
+type: reference
 related: [bit-manipulation, bit-tricks, integer-arithmetic, math-module]
 ---
 # Number Bases

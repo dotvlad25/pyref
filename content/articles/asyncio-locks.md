@@ -3,6 +3,7 @@ id: asyncio-locks
 title: asyncio Sync Primitives
 keywords: [asyncio.Lock, asyncio.Semaphore, asyncio.Event, async with, critical section, race condition, await boundary, synchronization, mutex, signaling, condition]
 category: Concurrency
+type: reference
 related: [asyncio-basics, asyncio-queue, threading-basics, coroutines, asyncio-timeouts]
 ---
 # asyncio Sync Primitives

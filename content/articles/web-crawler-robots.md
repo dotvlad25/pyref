@@ -3,6 +3,7 @@ id: web-crawler-robots
 title: Web Crawler (robots.txt)
 keywords: [web crawler, robots.txt, robotparser, robotfileparser, can_fetch, politeness, disallow, user agent, threadpool, crawler etiquette, injectable fetcher, allow all]
 category: Concurrency
+type: solution
 related: [web-crawler-ratelimit, web-crawler-threadpool, web-crawler, web-crawler-asyncio, url-parsing, thread-pool, locks]
 ---
 # Web Crawler (robots.txt)

@@ -3,6 +3,7 @@ id: integer-interning
 title: Integer Interning (Small Int Cache)
 keywords: [integer interning, small int cache, "-5 to 256", is on ints, identity int, id(), cpython cache, why is fails, use == for numbers, int object reuse, cached integers, is vs equals int]
 category: Language
+type: concept
 related: [is-vs-equals, integer-arithmetic, truthiness, pass-by-object-reference]
 ---
 # Integer Interning (Small Int Cache)

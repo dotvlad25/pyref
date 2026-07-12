@@ -3,6 +3,7 @@ id: subclassing-thread
 title: Subclassing Thread
 keywords: [subclass thread, "threading.Thread", override run, custom thread, run method, "super().__init__()", stateful thread, thread class, start, join, target vs subclass]
 category: Concurrency
+type: pattern
 related: [threading-basics, daemon-threads, thread-exceptions, classes, producer-consumer, thread-pool]
 ---
 # Subclassing Thread

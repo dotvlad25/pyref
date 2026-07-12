@@ -3,6 +3,7 @@ id: coroutines
 title: Coroutines Explained
 keywords: [coroutine, coroutine object, async def, await, awaitable, create_task, schedule, never awaited, RuntimeWarning, async function, cooperative]
 category: Concurrency
+type: concept
 related: [asyncio-basics, event-loop, asyncio-gather, taskgroup, async-iterators]
 ---
 # Coroutines Explained

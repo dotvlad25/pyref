@@ -3,6 +3,7 @@ id: pathlib
 title: pathlib
 keywords: [pathlib, Path, PurePath, path, joinpath, slash operator, glob, rglob, read_text, write_text, read_bytes, exists, is_file, is_dir, mkdir, suffix, stem, name, parent, parts, resolve, cwd, home, unlink, iterdir, with_suffix]
 category: Standard Library
+type: reference
 related: [os-path, os-walk, file-metadata, file-io, file-hashing]
 ---
 # pathlib

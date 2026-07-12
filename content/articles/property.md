@@ -3,6 +3,7 @@ id: property
 title: property (getters/setters)
 keywords: [property, getter, setter, deleter, computed attribute, encapsulation, validation, descriptor, cached_property, read-only]
 category: OOP
+type: reference
 related: [classmethod-staticmethod, functools-cache, context-managers]
 ---
 # property (getters/setters)

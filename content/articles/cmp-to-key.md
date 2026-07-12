@@ -3,6 +3,7 @@ id: cmp-to-key
 title: "functools.cmp_to_key"
 keywords: [cmp_to_key, cmp to key, comparator, compare, custom sort, three way compare, spaceship, largest number, sort key, functools, "-1 0 1", pairwise order]
 category: Standard Library
+type: reference
 related: [sorting-key, sorted-vs-sort, cmp-to-key, functools-reduce, comparable-objects, lambda]
 ---
 # functools.cmp_to_key

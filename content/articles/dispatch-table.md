@@ -3,6 +3,7 @@ id: dispatch-table
 title: Dispatch Table (dict of functions)
 keywords: [dispatch table, dispatch dict, dict of functions, function map, handler map, replace if elif chain, action dispatch, jump table, command pattern, registry, lookup table]
 category: Patterns
+type: pattern
 related: [state-machines, singledispatch, functools-partial, lambda, dict]
 ---
 # Dispatch Table (dict of functions)

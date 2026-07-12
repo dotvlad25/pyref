@@ -3,6 +3,7 @@ id: slots
 title: __slots__
 keywords: [__slots__, slots, memory, __dict__, attribute, optimization, restriction, fixed attributes, performance, footprint]
 category: OOP
+type: reference
 related: [classes, dataclasses, magic-methods, namedtuple]
 ---
 # __slots__

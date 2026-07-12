@@ -3,6 +3,7 @@ id: merge-intervals
 title: Merge Intervals
 keywords: [merge intervals, overlapping intervals, sort by start, insert interval, meeting rooms, interval scheduling, sweep line, overlap, union of ranges]
 category: Algorithms
+type: algo
 related: [sorting-key, two-pointers, heapq, sliding-window]
 ---
 # Merge Intervals

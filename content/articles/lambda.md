@@ -3,6 +3,7 @@ id: lambda
 title: Lambda Functions
 keywords: [lambda, anonymous function, inline function, key, sorted, map, filter, reduce, min, max, throwaway]
 category: Language
+type: reference
 related: [nested-functions, closures, sorting-key, functools-cache]
 ---
 # Lambda Functions

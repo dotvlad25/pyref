@@ -3,6 +3,7 @@ id: thread-exceptions
 title: Exception Handling in Threads
 keywords: [thread exception, exception in thread, "threading.excepthook", uncaught exception, exception propagation, error queue, thread error handling, sys.stderr, join exception, catch thread error]
 category: Concurrency
+type: concept
 related: [threading-basics, subclassing-thread, exception-handling, producer-consumer, queue-module, thread-pool, future-objects]
 ---
 # Exception Handling in Threads

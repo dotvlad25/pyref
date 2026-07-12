@@ -3,6 +3,7 @@ id: run-in-executor
 title: Mixing Sync & Async
 keywords: [to_thread, run_in_executor, blocking, offload, ThreadPoolExecutor, ProcessPoolExecutor, requests, boto3, sqlalchemy, legacy sync library, executor, cpu-bound]
 category: Concurrency
+type: reference
 related: [event-loop, asyncio-basics, thread-pool, multiprocessing, coroutines]
 ---
 # Mixing Sync & Async

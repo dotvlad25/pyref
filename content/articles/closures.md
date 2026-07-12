@@ -3,6 +3,7 @@ id: closures
 title: Closures & Late Binding
 keywords: [closure, late binding, captured variable, free variable, cell, loop closure bug, default argument capture, __closure__, nonlocal]
 category: Language
+type: concept
 related: [nested-functions, global-nonlocal, default-args-gotcha, lambda]
 ---
 # Closures & Late Binding

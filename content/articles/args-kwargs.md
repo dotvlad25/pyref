@@ -3,6 +3,7 @@ id: args-kwargs
 title: "*args and **kwargs"
 keywords: [args, kwargs, varargs, variadic, star args, double star, unpacking, forwarding, keyword-only, positional-only, splat]
 category: Language
+type: reference
 related: [default-args-gotcha, lambda, nested-functions]
 ---
 # *args and **kwargs

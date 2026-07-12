@@ -3,6 +3,7 @@ id: threading-basics
 title: threading Basics
 keywords: [threading, thread, start, join, daemon, lock, race condition, GIL, concurrent, target]
 category: Concurrency
+type: reference
 related: [queue-module, thread-pool, gil, asyncio-basics, multiprocessing]
 ---
 # threading Basics

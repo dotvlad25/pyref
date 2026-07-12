@@ -3,6 +3,7 @@ id: functools-cache
 title: functools.lru_cache & cache
 keywords: [functools, lru_cache, cache, memoize, memoization, cached_property, maxsize, decorator]
 category: Standard Library
+type: reference
 related: [lru-cache, dict, recursion-memoization]
 ---
 # functools.lru_cache & cache

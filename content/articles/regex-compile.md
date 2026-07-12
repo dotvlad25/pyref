@@ -3,6 +3,7 @@ id: regex-compile
 title: Compiled Patterns & Flags
 keywords: [re.compile, compiled pattern, flags, re.IGNORECASE, re.I, re.MULTILINE, re.M, re.DOTALL, re.S, re.VERBOSE, re.X, inline flags, pattern object, performance]
 category: Standard Library
+type: reference
 related: [regex-basics, regex-search-match, regex-findall-sub, regex-groups]
 ---
 # Compiled Patterns & Flags

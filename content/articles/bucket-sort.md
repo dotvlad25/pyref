@@ -3,6 +3,7 @@ id: bucket-sort
 title: Bucket Sort
 keywords: [bucket sort, distribution sort, buckets, uniform distribution, O(n) average, floats in range, top k frequent, sort by frequency, counting sort]
 category: Algorithms
+type: algo
 related: [counting-sort, sorting-key, top-k, counter]
 ---
 # Bucket Sort

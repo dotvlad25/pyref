@@ -3,7 +3,8 @@ id: os-path
 title: os.path (Path String Operations)
 keywords: [os.path, join, basename, dirname, splitext, split, abspath, normpath, expanduser, relpath, commonpath, path manipulation, file extension, split path]
 category: Standard Library
-related: [pathlib, os-walk, file-metadata, file-io]
+type: reference
+related: [os-module, pathlib, os-walk, file-metadata, file-io]
 ---
 # os.path (Path String Operations)
 

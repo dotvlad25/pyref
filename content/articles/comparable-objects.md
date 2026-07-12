@@ -3,6 +3,7 @@ id: comparable-objects
 title: Comparable & Hashable Objects
 keywords: [comparable, hashable, __eq__, __hash__, __lt__, total_ordering, functools, hash contract, sortable, set element, dict key, heap, immutable]
 category: OOP
+type: concept
 related: [magic-methods, dataclasses, classes, heap-tuples, sorting-key, set]
 ---
 # Comparable & Hashable Objects

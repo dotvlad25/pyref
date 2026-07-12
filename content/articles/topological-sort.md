@@ -3,6 +3,7 @@ id: topological-sort
 title: Topological Sort (Kahn's Algorithm)
 keywords: [topological sort, topo sort, kahn, indegree, dag, dependency, ordering, cycle detection, course schedule]
 category: Algorithms
+type: algo
 related: [bfs, dfs, graph-representation, deque]
 ---
 # Topological Sort (Kahn's Algorithm)

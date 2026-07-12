@@ -3,6 +3,7 @@ id: producer-consumer
 title: Producer-Consumer Pattern
 keywords: [producer consumer, queue, workers, sentinel, task_done, join, graceful shutdown, worker pool, bounded queue, poison pill, thread safe queue]
 category: Concurrency
+type: pattern
 related: [queue-module, condition-variables, thread-pool, deadlocks, events, asyncio-queue]
 ---
 # Producer-Consumer Pattern

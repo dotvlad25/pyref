@@ -3,6 +3,7 @@ id: string-immutability
 title: "String Immutability and Concatenation Performance"
 keywords: [string immutable, immutability, str concatenation, plus equals in loop, quadratic, o(n^2), join, build string, stringbuilder, list then join, new string object]
 category: Language
+type: concept
 related: [string-basics, string-methods, string-split-join, list-methods]
 ---
 # String Immutability and Concatenation Performance

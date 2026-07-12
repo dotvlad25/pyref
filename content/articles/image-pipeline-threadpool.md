@@ -3,6 +3,7 @@ id: image-pipeline-threadpool
 title: Bulk Image Processing Pipeline (Threaded)
 keywords: [image processing, pillow, PIL, threadpool, threadpoolexecutor, as_completed, parallel, embarrassingly parallel, gil release, failure isolation, bounded memory, batch, fan out]
 category: Concurrency
+type: solution
 related: [image-pipeline, image-pipeline-idempotency, image-pipeline-progress, image-pipeline-memory, thread-pool, as-completed, gil]
 ---
 # Bulk Image Processing Pipeline (Threaded)

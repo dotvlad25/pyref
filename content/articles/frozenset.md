@@ -3,6 +3,7 @@ id: frozenset
 title: frozenset
 keywords: [frozenset, immutable set, hashable set, set as dict key, set as cache key, memoization key, visited state, backtracking state, dp state, unordered, constant]
 category: Data Structures
+type: reference
 related: [set, hashable-objects, functools-cache, lru-cache, backtracking, dp-intro]
 ---
 # frozenset

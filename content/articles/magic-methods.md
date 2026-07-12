@@ -3,6 +3,7 @@ id: magic-methods
 title: Dunder / Magic Methods
 keywords: [dunder, magic method, special method, __repr__, __str__, __eq__, __lt__, __hash__, __len__, __getitem__, __iter__, __contains__, __call__, operator overloading]
 category: OOP
+type: reference
 related: [classes, comparable-objects, dataclasses, slots, sorting-key]
 ---
 # Dunder / Magic Methods

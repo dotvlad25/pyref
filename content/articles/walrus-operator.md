@@ -3,6 +3,7 @@ id: walrus-operator
 title: Walrus Operator :=
 keywords: [walrus operator, assignment expression, colon equals, while loop, comprehension filter, inline assignment, named expression, avoid double call]
 category: Language
+type: reference
 related: [comprehensions, generator-expressions, sliding-window]
 ---
 # Walrus Operator :=

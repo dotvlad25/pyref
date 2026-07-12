@@ -3,6 +3,7 @@ id: deque
 title: collections.deque
 keywords: [deque, double ended queue, queue, stack, appendleft, popleft, rotate, O(1), sliding window, collections]
 category: Data Structures
+type: reference
 related: [queue-module, stack, sliding-window, doubly-linked-list, bfs]
 ---
 # collections.deque

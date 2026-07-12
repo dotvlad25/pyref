@@ -3,6 +3,7 @@ id: tree-traversal
 title: Tree Traversals
 keywords: [inorder, preorder, postorder, tree traversal, dfs traversal, iterative traversal, recursive traversal, stack, visit order, morris]
 category: Algorithms
+type: algo
 related: [binary-tree, tree-level-order, bst, validate-bst, stack, dfs]
 ---
 # Tree Traversals

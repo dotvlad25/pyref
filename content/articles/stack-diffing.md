@@ -3,6 +3,7 @@ id: stack-diffing
 title: Stack Diffing (Snapshots → Enter/Exit Events)
 keywords: [stack diff, sampling profiler, snapshots, trace events, start end, call stack, track by position not name, recursion, flame graph, common prefix, enter exit, denoising, confirmation window, streaming events, per-depth walk, debounce]
 category: Patterns
+type: solution
 related: [stack, state-machines, enum, tree-recursion-patterns, dict]
 ---
 # Stack Diffing (Snapshots → Enter/Exit Events)

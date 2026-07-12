@@ -3,6 +3,7 @@ id: asyncio-cancellation
 title: "Asyncio Task Cancellation and Shield"
 keywords: [cancel, task.cancel, cancellation, CancelledError, asyncio.CancelledError, shield, asyncio.shield, cleanup, graceful, propagation, uncancel, protect coroutine]
 category: Concurrency
+type: concept
 related: [asyncio-basics, asyncio-create-task, asyncio-cancellation, coroutines, asyncio-timeouts, asyncio-gather, taskgroup, sentinel-shutdown]
 ---
 # Asyncio Task Cancellation and Shield

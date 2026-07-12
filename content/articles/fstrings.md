@@ -3,6 +3,7 @@ id: fstrings
 title: f-strings
 keywords: [f-string, format, string formatting, format spec, debug equals, alignment, padding, precision, thousands separator, zero pad, fill, width, repr]
 category: Language
+type: reference
 related: [ternary-expression, enumerate-zip, comprehensions]
 ---
 # f-strings

@@ -3,6 +3,7 @@ id: connected-components
 title: Connected Components
 keywords: [connected components, count components, number of components, islands, dfs, bfs, union find, undirected graph, groups, clusters]
 category: Algorithms
+type: algo
 related: [union-find, bfs, dfs, grid-traversal, graph-representation]
 ---
 # Connected Components

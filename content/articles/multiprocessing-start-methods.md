@@ -3,6 +3,7 @@ id: multiprocessing-start-methods
 title: Process Start Methods (spawn vs fork)
 keywords: [spawn, fork, forkserver, start method, set_start_method, get_context, __main__, main guard, re-import, reimport, recursive spawning, RuntimeError, multiprocessing, copy-on-write, pickle, windows, macos, linux]
 category: Concurrency
+type: concept
 related: [multiprocessing, process-pool, multiprocessing-shared-state, choosing-concurrency-model, concurrency-vs-parallelism, gil]
 ---
 # Process Start Methods (spawn vs fork)

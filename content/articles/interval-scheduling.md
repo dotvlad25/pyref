@@ -3,6 +3,7 @@ id: interval-scheduling
 title: Interval Scheduling
 keywords: [interval scheduling, intervals, merge intervals, sort by end, sort by start, non overlapping intervals, meeting rooms, activity selection, erase overlap, min arrows]
 category: Algorithms
+type: pattern
 related: [greedy, sorting-key, heapq, two-heap-median]
 ---
 # Interval Scheduling

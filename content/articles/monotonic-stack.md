@@ -3,6 +3,7 @@ id: monotonic-stack
 title: Monotonic Stack
 keywords: [monotonic stack, next greater element, next smaller element, previous greater, daily temperatures, stock span, largest rectangle histogram, stack of indices]
 category: Algorithms
+type: pattern
 related: [stack, prefix-sum, sliding-window, deque]
 ---
 # Monotonic Stack

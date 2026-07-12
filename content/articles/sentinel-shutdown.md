@@ -3,6 +3,7 @@ id: sentinel-shutdown
 title: Sentinel Pattern for Graceful Shutdown
 keywords: [sentinel value, graceful shutdown, poison pill, none sentinel, object sentinel, stop worker threads, queue shutdown, producer consumer exit, task_done]
 category: Concurrency
+type: pattern
 related: [producer-consumer, queue-module, sentinel-shutdown, daemon-threads, thread-pool, asyncio-queue]
 ---
 # Sentinel Pattern for Graceful Shutdown

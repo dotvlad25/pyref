@@ -3,6 +3,7 @@ id: cycle-detection
 title: Cycle Detection
 keywords: [cycle detection, detect cycle, directed graph, undirected graph, back edge, three color, white gray black, dfs, parent, union find, deadlock, dependency cycle]
 category: Algorithms
+type: algo
 related: [topological-sort, union-find, dfs, connected-components, graph-representation]
 ---
 # Cycle Detection

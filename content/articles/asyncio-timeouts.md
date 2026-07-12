@@ -3,6 +3,7 @@ id: asyncio-timeouts
 title: Timeouts & Cancellation
 keywords: [wait_for, timeout, asyncio.timeout, TimeoutError, CancelledError, cancel, task cancellation, shield, deadline, cleanup]
 category: Concurrency
+type: reference
 related: [coroutines, taskgroup, asyncio-gather, event-loop, asyncio-locks]
 ---
 # Timeouts & Cancellation

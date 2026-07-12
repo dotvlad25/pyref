@@ -3,6 +3,7 @@ id: dp-intro
 title: Dynamic Programming Fundamentals
 keywords: [dynamic programming, dp, memoization, tabulation, top-down, bottom-up, overlapping subproblems, optimal substructure, state, recurrence, cache, functools cache]
 category: Algorithms
+type: concept
 related: [recursion-memoization, functools-cache, lru-cache, coin-change, knapsack, kadane]
 ---
 # Dynamic Programming Fundamentals

@@ -3,6 +3,7 @@ id: type-hints
 title: Type Hints
 keywords: [type hints, annotations, typing, Optional, Union, list int, dict, Callable, Any, generics, mypy, TypeVar, Protocol, return type, arrow]
 category: Language
+type: reference
 related: [classes, dataclasses, abc, enum, namedtuple]
 ---
 # Type Hints

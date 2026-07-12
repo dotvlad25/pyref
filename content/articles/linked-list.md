@@ -3,6 +3,7 @@ id: linked-list
 title: Singly Linked List
 keywords: [linked list, singly linked list, node, next, reverse, dummy head, fast slow pointer, merge, cycle]
 category: Data Structures
+type: reference
 related: [doubly-linked-list, two-pointers, deque]
 ---
 # Singly Linked List

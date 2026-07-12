@@ -3,6 +3,7 @@ id: tree-level-order
 title: Level-Order Traversal
 keywords: [level order, bfs, breadth first, tree levels, deque, zigzag, right side view, per level, queue, level by level]
 category: Algorithms
+type: algo
 related: [binary-tree, tree-traversal, bfs, deque, tree-serialization]
 ---
 # Level-Order Traversal

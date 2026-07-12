@@ -3,6 +3,7 @@ id: 2d-grid
 title: 2D Lists & Grid Initialization
 keywords: [2d list, grid, matrix, initialization, nested list, star trap, reference, aliasing, list multiplication, direction array, neighbors, rows cols]
 category: Data Structures
+type: pattern
 related: [list-basics, shallow-deep-copy, bfs, dfs, graph-representation]
 ---
 # 2D Lists & Grid Initialization

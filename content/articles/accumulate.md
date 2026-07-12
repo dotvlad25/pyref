@@ -3,6 +3,7 @@ id: accumulate
 title: accumulate (Prefix Sums)
 keywords: [accumulate, itertools, prefix sum, running total, cumulative sum, prefix scan, running max, initial, operator, reduce, range sum query]
 category: Standard Library
+type: reference
 related: [itertools-overview, chain-islice, sliding-window, functools-cache]
 ---
 # accumulate (Prefix Sums)

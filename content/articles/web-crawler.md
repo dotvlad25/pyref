@@ -3,6 +3,7 @@ id: web-crawler
 title: Web Crawler (Same-Host BFS)
 keywords: [web crawler, crawler, same host, hostname, bfs, frontier, seen set, dedup, visited, urlparse, deque, single threaded, link graph, scrape]
 category: Patterns
+type: solution
 related: [web-crawler-threadpool, web-crawler-asyncio, web-crawler-robots, bfs, deque, url-parsing, thread-pool, set]
 ---
 # Web Crawler (Same-Host BFS)

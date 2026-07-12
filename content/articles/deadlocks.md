@@ -3,6 +3,7 @@ id: deadlocks
 title: Deadlocks & Avoidance
 keywords: [deadlock, lock ordering, circular wait, timeout, acquire timeout, hang, freeze, livelock, nested locks, consistent order, prevent deadlock]
 category: Concurrency
+type: concept
 related: [locks, race-conditions, condition-variables, semaphores, producer-consumer]
 ---
 # Deadlocks & Avoidance

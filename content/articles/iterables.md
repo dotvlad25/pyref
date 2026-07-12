@@ -3,6 +3,7 @@ id: iterables
 title: "Iterables: the Iterable Protocol"
 keywords: [iterable, iterator, iter, next, "__iter__", "__next__", for loop, protocol, generator, generator expression, lazy, sum, min, max, sorted, list, any iterable, sequence]
 category: Language
+type: concept
 related: [loops, generator-expressions, next-builtin, enumerate-zip, comprehensions, sorted-vs-sort, min-max-any-all]
 ---
 # Iterables: the Iterable Protocol

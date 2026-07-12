@@ -3,6 +3,7 @@ id: asyncio-queue
 title: asyncio.Queue
 keywords: [asyncio, queue, async queue, producer consumer, await put, await get, task_done, join, backpressure]
 category: Concurrency
+type: reference
 related: [asyncio-basics, asyncio-gather, queue-module]
 ---
 # asyncio.Queue

@@ -3,6 +3,7 @@ id: chain-islice
 title: chain, islice, tee
 keywords: [chain, islice, tee, itertools, flatten, concatenate, slice iterator, duplicate iterator, from_iterable, chain.from_iterable, lazy slice, generator slicing]
 category: Standard Library
+type: reference
 related: [itertools-overview, count-cycle-repeat, accumulate, deque]
 ---
 # chain, islice, tee

@@ -3,6 +3,7 @@ id: global-nonlocal
 title: global & nonlocal
 keywords: [global, nonlocal, scope, rebind, UnboundLocalError, module scope, enclosing scope, LEGB, closure counter, mutate outer variable]
 category: Language
+type: reference
 related: [closures, nested-functions, dfs]
 ---
 # global & nonlocal

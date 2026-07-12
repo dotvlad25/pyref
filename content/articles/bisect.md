@@ -3,6 +3,7 @@ id: bisect
 title: bisect (Binary Search on Sorted Lists)
 keywords: [bisect, binary search, sorted list, insort, bisect_left, bisect_right, lower bound, upper bound, insertion point]
 category: Standard Library
+type: reference
 related: [binary-search, sorting-key, heapq]
 ---
 # bisect (Binary Search on Sorted Lists)

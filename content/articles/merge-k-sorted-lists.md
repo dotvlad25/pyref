@@ -3,6 +3,7 @@ id: merge-k-sorted-lists
 title: Merge K Sorted Lists
 keywords: [merge k sorted lists, heapq, heappush, heappop, min-heap, priority queue, merge, heapq.merge, k-way merge, sorted, iterator, tie-breaker, leetcode 23]
 category: Algorithms
+type: algo
 related: [heapq, heap-tuples, top-k, lazy-deletion-heap, two-heap-median, linked-list, mergesort]
 ---
 # Merge K Sorted Lists

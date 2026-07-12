@@ -3,6 +3,7 @@ id: csv-module
 title: CSV Files
 keywords: [csv, csv.reader, csv.writer, DictReader, DictWriter, writerow, writerows, delimiter, header, fieldnames, quoting, newline, tsv, tab separated, parse csv, read csv, write csv]
 category: Standard Library
+type: reference
 related: [json-module, file-io, pathlib]
 ---
 # CSV Files

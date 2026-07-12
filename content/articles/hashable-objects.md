@@ -3,6 +3,7 @@ id: hashable-objects
 title: Hashable Objects
 keywords: [hashable, unhashable, hash, __hash__, __eq__, dict key, set element, TypeError unhashable type, immutable, mutable, tuple key, frozenset key, id, caching key]
 category: Language
+type: concept
 related: [frozenset, dict, set, functools-cache, lru-cache, is-vs-equals, dataclasses, magic-methods]
 ---
 # Hashable Objects

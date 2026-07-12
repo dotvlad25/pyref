@@ -3,6 +3,7 @@ id: nested-functions
 title: Nested Functions
 keywords: [nested function, inner function, helper function, factory function, closure, recursion helper, def inside def]
 category: Language
+type: concept
 related: [closures, lambda, global-nonlocal, recursion-memoization, dfs]
 ---
 # Nested Functions

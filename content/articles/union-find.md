@@ -3,6 +3,7 @@ id: union-find
 title: Union-Find (Disjoint Set)
 keywords: [union find, disjoint set, dsu, disjoint set union, path compression, union by rank, connected, components, cycle, redundant connection, alpha inverse ackermann]
 category: Data Structures
+type: algo
 related: [connected-components, cycle-detection, graph-representation, topological-sort, bfs]
 ---
 # Union-Find (Disjoint Set)

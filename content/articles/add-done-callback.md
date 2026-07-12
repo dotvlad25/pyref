@@ -3,6 +3,7 @@ id: add-done-callback
 title: add_done_callback
 keywords: [add_done_callback, callback, future, completion callback, done callback, concurrent.futures, threadpoolexecutor, future.result, on complete, non-blocking callback, worker thread]
 category: Concurrency
+type: reference
 related: [future-objects, thread-pool, as-completed, asyncio-create-task, producer-consumer]
 ---
 # add_done_callback

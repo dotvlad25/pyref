@@ -3,6 +3,7 @@ id: file-chunking
 title: Chunking Large Files
 keywords: [chunk, chunking, read blocks, walrus operator, memory efficient, stream file, large file, block size, buffer, read size, iter, partial read, binary read, generator]
 category: Standard Library
+type: pattern
 related: [file-io, file-hashing, pathlib]
 ---
 # Chunking Large Files

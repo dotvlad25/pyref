@@ -3,6 +3,7 @@ id: functools-partial
 title: functools.partial
 keywords: [functools, partial, currying, pre-bind, bind arguments, callback, freeze arguments, keyword defaults, higher order]
 category: Standard Library
+type: reference
 related: [functools-reduce, singledispatch, sorting-key, functools-cache]
 ---
 # functools.partial

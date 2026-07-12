@@ -3,6 +3,7 @@ id: recursion-memoization
 title: Recursion & Memoization (Top-Down DP)
 keywords: [recursion, memoization, dynamic programming, dp, top down, cache, lru_cache, fibonacci, overlapping subproblems, recursion limit]
 category: Patterns
+type: pattern
 related: [functools-cache, dfs, binary-search]
 ---
 # Recursion & Memoization (Top-Down DP)

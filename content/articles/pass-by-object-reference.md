@@ -3,6 +3,7 @@ id: pass-by-object-reference
 title: Pass by Object Reference (Call by Object Sharing)
 keywords: [pass by object reference, call by object sharing, pass by assignment, pass by reference, pass by value, mutate in place, rebind, slice assignment, "lst[:]", mutable argument, immutable argument, function arguments, aliasing]
 category: Language
+type: concept
 related: [is-vs-equals, default-args-gotcha, shallow-deep-copy, string-immutability, list-slicing]
 ---
 # Pass by Object Reference (Call by Object Sharing)

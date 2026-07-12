@@ -3,6 +3,7 @@ id: binary-search-answer
 title: Binary Search on the Answer
 keywords: [binary search on answer, binary search on solution space, feasibility, predicate, monotonic, minimize maximum, koko bananas, ship packages, split array, capacity, parametric search]
 category: Patterns
+type: pattern
 related: [binary-search, bisect, quickselect, merge-intervals]
 ---
 # Binary Search on the Answer

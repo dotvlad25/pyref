@@ -3,6 +3,7 @@ id: race-conditions
 title: Race Conditions & Thread Safety
 keywords: [race condition, thread safety, thread safe, atomic, gil, read modify write, check then act, data corruption, shared state, compound operation, non atomic, lost update]
 category: Concurrency
+type: concept
 related: [locks, per-key-locking, gil, deadlocks, condition-variables, producer-consumer, semaphores]
 ---
 # Race Conditions & Thread Safety

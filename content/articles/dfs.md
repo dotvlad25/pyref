@@ -3,6 +3,7 @@ id: dfs
 title: Depth-First Search (DFS)
 keywords: [dfs, depth first search, recursion, stack, graph, traversal, visited, backtracking, connected components]
 category: Algorithms
+type: algo
 related: [bfs, graph-representation, topological-sort, recursion-memoization]
 ---
 # Depth-First Search (DFS)

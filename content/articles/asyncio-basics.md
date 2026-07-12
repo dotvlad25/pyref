@@ -3,6 +3,7 @@ id: asyncio-basics
 title: asyncio Basics (async/await)
 keywords: [asyncio, async, await, coroutine, event loop, asyncio.run, create_task, gather, concurrency, non-blocking]
 category: Concurrency
+type: reference
 related: [asyncio-gather, asyncio-queue, threading-basics, gil]
 ---
 # asyncio Basics (async/await)

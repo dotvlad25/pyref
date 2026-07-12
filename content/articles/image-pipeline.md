@@ -3,6 +3,7 @@ id: image-pipeline
 title: Bulk Image Processing Pipeline
 keywords: [image processing, pillow, PIL, batch pipeline, transform steps, resize rotate crop, config driven, dispatch, json pipeline, apply actions, cross product, save format]
 category: Patterns
+type: solution
 related: [image-pipeline-threadpool, image-pipeline-idempotency, dispatch-table, pathlib, json-module, dict]
 ---
 # Bulk Image Processing Pipeline

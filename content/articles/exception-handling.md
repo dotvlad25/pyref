@@ -3,6 +3,7 @@ id: exception-handling
 title: try/except/else/finally
 keywords: [exception, try, except, else, finally, catch, error handling, ValueError, KeyError, IndexError, ZeroDivisionError, cleanup, multiple exceptions, as]
 category: Language
+type: reference
 related: [custom-exceptions, raising-exceptions, dict]
 ---
 # try/except/else/finally

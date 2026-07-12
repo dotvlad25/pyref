@@ -3,6 +3,7 @@ id: comprehensions
 title: List/Dict/Set Comprehensions
 keywords: [comprehension, list comprehension, dict comprehension, set comprehension, filtering, nested comprehension, conditional expression, ternary, flatten, map filter]
 category: Language
+type: reference
 related: [generator-expressions, enumerate-zip, ternary-expression, dict, set]
 ---
 # List/Dict/Set Comprehensions

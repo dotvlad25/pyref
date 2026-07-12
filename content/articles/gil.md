@@ -3,6 +3,7 @@ id: gil
 title: The GIL (Global Interpreter Lock)
 keywords: [GIL, global interpreter lock, cpython, thread, parallelism, cpu bound, io bound, multiprocessing, reference counting, PEP 703]
 category: Concurrency
+type: concept
 related: [threading-basics, multiprocessing, thread-pool, asyncio-basics]
 ---
 # The GIL (Global Interpreter Lock)

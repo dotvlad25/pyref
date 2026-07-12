@@ -3,6 +3,7 @@ id: dataclasses
 title: dataclasses
 keywords: [dataclass, dataclasses, field, frozen, order, default_factory, __init__ generated, __repr__, __eq__, boilerplate, record, asdict]
 category: OOP
+type: reference
 related: [classes, namedtuple, magic-methods, comparable-objects, type-hints, slots]
 ---
 # dataclasses

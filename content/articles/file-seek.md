@@ -3,6 +3,7 @@ id: file-seek
 title: File Seeking (seek & tell)
 keywords: [seek, tell, f.seek, random access, file offset, seek from end, whence, SEEK_SET, SEEK_CUR, SEEK_END, os.SEEK_END, read at offset, binary file position, rewind]
 category: Standard Library
+type: reference
 related: [file-io, file-chunking, file-metadata, duplicate-finder]
 ---
 # File Seeking (seek & tell)

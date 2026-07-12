@@ -3,6 +3,7 @@ id: asyncio-create-task
 title: asyncio.create_task
 keywords: [asyncio.create_task, create_task, task, background task, concurrent coroutines, schedule coroutine, await task, ensure_future, run coroutines concurrently, event loop task]
 category: Concurrency
+type: reference
 related: [asyncio-basics, asyncio-gather, coroutines, event-loop, taskgroup, blocking-the-event-loop, asyncio-cancellation]
 ---
 # asyncio.create_task

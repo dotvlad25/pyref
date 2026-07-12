@@ -3,6 +3,7 @@ id: star-unpacking
 title: Star Unpacking (* and **)
 keywords: [star unpacking, splat, first rest, unpack, spread, args, kwargs, merge lists, merge dicts, zip star, transpose, variadic, argument spreading]
 category: Language
+type: reference
 related: [unpacking, enumerate-zip, comprehensions]
 ---
 # Star Unpacking (* and **)

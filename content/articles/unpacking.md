@@ -3,6 +3,7 @@ id: unpacking
 title: Tuple Unpacking & Swap
 keywords: [unpacking, tuple unpacking, swap, a b = b a, destructuring, multiple assignment, nested unpacking, underscore, ignore value, parallel assignment]
 category: Language
+type: reference
 related: [star-unpacking, enumerate-zip, two-pointers]
 ---
 # Tuple Unpacking & Swap

@@ -3,6 +3,7 @@ id: enumerate-zip
 title: enumerate & zip
 keywords: [enumerate, zip, index and value, parallel iteration, start index, transpose, zip star, strict, dict from zip, pair lists, unzip]
 category: Language
+type: reference
 related: [star-unpacking, unpacking, dict, comprehensions]
 ---
 # enumerate & zip

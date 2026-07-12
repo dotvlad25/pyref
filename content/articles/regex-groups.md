@@ -3,6 +3,7 @@ id: regex-groups
 title: Groups & Named Groups
 keywords: [regex groups, capturing group, named group, P<name>, groupdict, non-capturing group, backreference, alternation, group index, groups method, optional group]
 category: Standard Library
+type: reference
 related: [regex-basics, regex-search-match, regex-findall-sub, regex-compile]
 ---
 # Groups & Named Groups

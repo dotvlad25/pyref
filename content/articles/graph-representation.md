@@ -3,6 +3,7 @@ id: graph-representation
 title: Graph Representation
 keywords: [graph, adjacency list, adjacency matrix, defaultdict, edges, directed, undirected, weighted, build graph]
 category: Algorithms
+type: pattern
 related: [bfs, dfs, dijkstra, topological-sort, defaultdict]
 ---
 # Graph Representation

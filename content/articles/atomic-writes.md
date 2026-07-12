@@ -3,6 +3,7 @@ id: atomic-writes
 title: Atomic File Writes (temp + os.replace)
 keywords: [atomic write, os.replace, atomic file, crash safe, temp file rename, no partial write, corrupt file, durable, tempfile, idempotent write, safe save, rename atomic]
 category: Standard Library
+type: pattern
 related: [file-io, pathlib, os-walk, image-pipeline-idempotency, file-hashing]
 ---
 # Atomic File Writes (temp + os.replace)

@@ -3,7 +3,8 @@ id: bounded-concurrency
 title: Bounded Concurrency (Sizing a Worker Pool)
 keywords: [bounded concurrency, max_workers, pool sizing, memory budget, limit workers, cpu_count, resource limit, backpressure, how many threads, stream work, semaphore, connection limit]
 category: Concurrency
-related: [thread-pool, semaphores, image-pipeline-memory, gil, multiprocessing]
+type: pattern
+related: [thread-pool, semaphores, os-module, image-pipeline-memory, gil, multiprocessing]
 ---
 # Bounded Concurrency (Sizing a Worker Pool)
 

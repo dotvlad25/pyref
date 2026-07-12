@@ -3,6 +3,7 @@ id: image-pipeline-idempotency
 title: Bulk Image Pipeline (Idempotent Re-runs)
 keywords: [idempotent, idempotency, rerun, resume, skip existing, atomic write, os.replace, exist_ok, partial run, crash recovery, image pipeline, overwrite safe]
 category: Patterns
+type: solution
 related: [image-pipeline, image-pipeline-threadpool, atomic-writes, pathlib, json-module]
 ---
 # Bulk Image Pipeline (Idempotent Re-runs)

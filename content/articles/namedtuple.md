@@ -3,6 +3,7 @@ id: namedtuple
 title: namedtuple
 keywords: [namedtuple, collections, NamedTuple, typing, _replace, _asdict, _fields, record, immutable tuple, named fields, lightweight]
 category: Data Structures
+type: reference
 related: [dataclasses, classes, type-hints, comparable-objects]
 ---
 # namedtuple

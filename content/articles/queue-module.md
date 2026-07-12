@@ -3,6 +3,7 @@ id: queue-module
 title: queue Module (Thread-Safe Queues)
 keywords: [queue, thread safe, Queue, LifoQueue, PriorityQueue, put, get, task_done, join, producer consumer, threading]
 category: Concurrency
+type: reference
 related: [deque, threading-basics, thread-pool, asyncio-queue]
 ---
 # queue Module (Thread-Safe Queues)

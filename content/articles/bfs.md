@@ -3,6 +3,7 @@ id: bfs
 title: Breadth-First Search (BFS)
 keywords: [bfs, breadth first search, queue, deque, shortest path, level order, graph, traversal, visited]
 category: Algorithms
+type: algo
 related: [dfs, deque, graph-representation, topological-sort, dijkstra]
 ---
 # Breadth-First Search (BFS)

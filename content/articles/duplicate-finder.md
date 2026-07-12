@@ -3,6 +3,7 @@ id: duplicate-finder
 title: Duplicate File Finder (Tiered Hashing)
 keywords: [duplicate files, dedup, find duplicates, group by size, partial hash, full hash, tiered filtering, progressive, md5, sha256, os.walk, defaultdict, io savings]
 category: Patterns
+type: solution
 related: [file-hashing, file-metadata, file-seek, grouping, os-walk, defaultdict]
 ---
 # Duplicate File Finder (Tiered Hashing)

@@ -3,6 +3,7 @@ id: two-heap-median
 title: Two-Heap Running Median
 keywords: [median, two heap, running median, streaming median, heap, max heap, min heap, find median from data stream]
 category: Patterns
+type: pattern
 related: [heapq, heap-tuples, top-k]
 ---
 # Two-Heap Running Median
