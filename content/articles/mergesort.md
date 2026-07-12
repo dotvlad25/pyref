@@ -4,7 +4,7 @@ title: Merge Sort
 keywords: [merge sort, mergesort, divide and conquer, merge, stable sort, O(n log n), linked list sort, external sort, timsort, count inversions]
 category: Algorithms
 type: algo
-related: [quicksort, linked-list, sorting-key, quickselect]
+related: [quicksort, count-smaller-right, linked-list, sorting-key, quickselect]
 ---
 # Merge Sort
 

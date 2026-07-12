@@ -4,7 +4,7 @@ title: Prefix Sums
 keywords: [prefix sum, prefix sums, cumulative sum, running total, range sum query, accumulate, subarray sum, 2d prefix, integral image, subarray sum equals k]
 category: Algorithms
 type: pattern
-related: [two-pointers, sliding-window, counter, matrix-patterns]
+related: [two-pointers, sliding-window, fenwick-tree, counter, matrix-patterns]
 ---
 # Prefix Sums
 
