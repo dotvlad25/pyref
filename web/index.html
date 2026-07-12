@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Reference</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="brand">py<span>ref</span></div>
+      <input
+        id="search"
+        type="text"
+        placeholder="Search…  (try: queue, lru, heapq, asyncio)"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+      >
+      <div id="status" class="status"></div>
+      <div class="theme-switch" id="theme-switch" role="group" aria-label="Theme">
+        <button data-theme="dark"  title="Dark">Dark</button>
+        <button data-theme="light" title="Light">Light</button>
+        <button data-theme="sepia" title="Neutral (calm gray)">Neutral</button>
+      </div>
+    </header>
+
+    <main>
+      <aside id="results" class="results"></aside>
+      <div id="resizer" class="resizer" role="separator" aria-orientation="vertical" title="Drag to resize"></div>
+      <article id="article" class="article">
+        <div class="empty">
+          <p>Type to search. <kbd>↑</kbd><kbd>↓</kbd> to move, <kbd>Enter</kbd> to open, <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</p>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <script src="/vendor/minisearch.min.js"></script>
+  <script src="/vendor/marked.min.js"></script>
+  <script src="/vendor/highlight.min.js"></script>
+  <script src="/vendor/highlight-python.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Generated artifacts (rebuilt by server/build_index.py)
+server/reference.db
+static/index.json
+
+# OS / editor cruft
+.DS_Store
+
+# Claude Code local settings
+.claude/
+
+# Source book manuscripts — copyrighted, kept private (articles are derived from these)
+source/
