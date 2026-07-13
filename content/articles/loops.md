@@ -4,7 +4,7 @@ title: "Loops: for, while, and range"
 keywords: [for, while, range, loop, iterate, break, continue, do while, do-while, while true, for else, increment, i++, "i += 1", enumerate, control flow]
 category: Language
 type: reference
-related: [conditionals, iterables, enumerate-zip, comprehensions, next-builtin, loops]
+related: [conditionals, iterables, enumerate-zip, comprehensions, next-builtin]
 ---
 # Loops: for, while, and range
 

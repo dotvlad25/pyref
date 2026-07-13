@@ -4,7 +4,7 @@ title: "The next() Builtin and First-Match Idiom"
 keywords: [next, next builtin, advance iterator, stopiteration, default argument, first match, first element, generator expression, iterator, one-pass, sentinel default]
 category: Language
 type: reference
-related: [iterables, generator-expressions, next-builtin, min-max-any-all, enumerate-zip]
+related: [iterables, generator-expressions, min-max-any-all, enumerate-zip]
 ---
 # The next() Builtin and First-Match Idiom
 

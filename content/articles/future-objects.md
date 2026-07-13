@@ -4,7 +4,7 @@ title: Future Objects (concurrent.futures)
 keywords: [future, concurrent.futures, submit, result, exception, done, cancel, executor, ThreadPoolExecutor, async result, proxy, blocking result, timeout]
 category: Concurrency
 type: reference
-related: [thread-pool, as-completed, add-done-callback, asyncio-basics, future-objects, run-in-executor, process-pool]
+related: [thread-pool, as-completed, futures-wait, add-done-callback, run-in-executor, process-pool]
 ---
 # Future Objects (concurrent.futures)
 

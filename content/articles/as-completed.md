@@ -4,7 +4,7 @@ title: as_completed
 keywords: [as_completed, concurrent.futures, futures, yield as finished, out of order, first to finish, completion order, web scraping, map vs as_completed, executor]
 category: Concurrency
 type: reference
-related: [future-objects, thread-pool, add-done-callback, asyncio-gather, as-completed, process-pool]
+related: [futures-wait, future-objects, thread-pool, add-done-callback, dynamic-fan-out, process-pool]
 ---
 # as_completed
 

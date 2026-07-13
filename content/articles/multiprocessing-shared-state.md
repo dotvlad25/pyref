@@ -4,7 +4,7 @@ title: "Sharing State Between Processes"
 keywords: [multiprocessing, shared state, ipc, multiprocessing.Queue, Value, Array, get_lock, shared_memory, SharedMemory, pickle, inter-process communication, race condition, typecode]
 category: Concurrency
 type: concept
-related: [multiprocessing, process-pool, multiprocessing-shared-state, race-conditions, locks, queue-module, gil, multiprocessing-start-methods]
+related: [multiprocessing, process-pool, race-conditions, locks, queue-module, gil, multiprocessing-start-methods]
 ---
 # Sharing State Between Processes
 
