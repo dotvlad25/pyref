@@ -48,4 +48,4 @@ a is b     # often True (interned) — DON'T depend on this
 a == b     # True — ALWAYS use == for value comparison
 ```
 
-Same caveat as [integer interning](#) — `is` checks identity, `==` checks value.
+Same caveat as [integer interning](#integer-interning) — `is` checks identity, `==` checks value.

@@ -8,7 +8,7 @@ related: [bisect, sorting-key]
 ---
 # Binary Search (Template)
 
-When `bisect` doesn't fit (searching a condition, not a value), use this **half-open** template. It avoids the classic off-by-one and overflow bugs.
+When `bisect` doesn't fit (searching a condition, not a value), use these templates. They avoid the classic off-by-one and overflow bugs. Both keep the answer inside a **closed** interval `[lo, hi]`.
 
 ```python
 def binary_search(nums, target):

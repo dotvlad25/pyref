@@ -17,6 +17,7 @@ first, *rest = [1, 2, 3, 4, 5]   # first=1, rest=[2, 3, 4, 5]
 *init, last = [1, 2, 3, 4, 5]    # init=[1,2,3,4], last=5
 a, *mid, b = [1, 2, 3, 4, 5]     # a=1, mid=[2,3], b=5
 # The starred name always becomes a list (possibly empty).
+# Only one starred target per assignment (a, *b, *c = ... is a SyntaxError).
 ```
 
 ## Spread into a function call
@@ -52,6 +53,7 @@ combo  = {**d1, **d2}             # later keys win on conflict
 matrix = [[1, 2, 3], [4, 5, 6]]
 list(zip(*matrix))       # [(1, 4), (2, 5), (3, 6)]
 # *matrix -> zip([1,2,3],[4,5,6]); zip pairs the i-th of each row.
+# Ragged rows: zip stops at the shortest (use itertools.zip_longest to pad).
 ```
 
 See [enumerate & zip](#enumerate-zip) and basic [unpacking](#unpacking).

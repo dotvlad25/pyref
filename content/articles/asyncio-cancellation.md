@@ -4,7 +4,7 @@ title: "Asyncio Task Cancellation and Shield"
 keywords: [cancel, task.cancel, cancellation, CancelledError, asyncio.CancelledError, shield, asyncio.shield, cleanup, graceful, propagation, uncancel, protect coroutine]
 category: Concurrency
 type: concept
-related: [asyncio-basics, asyncio-create-task, asyncio-cancellation, coroutines, asyncio-timeouts, asyncio-gather, taskgroup, sentinel-shutdown]
+related: [asyncio-basics, asyncio-create-task, coroutines, asyncio-timeouts, asyncio-gather, taskgroup, sentinel-shutdown]
 ---
 # Asyncio Task Cancellation and Shield
 
@@ -34,11 +34,11 @@ async def main():
 asyncio.run(main())
 ```
 
-Rules: cancellation is cooperative — it only lands at an `await`. Always `raise` (don't swallow) `CancelledError` unless you have a deliberate reason; suppressing it breaks `gather`/`TaskGroup` and timeout semantics.
+Rules: cancellation is cooperative — it only lands at an `await`. Always `raise` (don't swallow) `CancelledError` unless you have a deliberate reason; suppressing it breaks `gather`/`TaskGroup` and timeout semantics. Since Python 3.8 `CancelledError` subclasses `BaseException`, so a bare `except Exception` will *not* catch it — catch it by name.
 
 ## asyncio.shield — protect cleanup from re-cancellation
 
-If your `except CancelledError` cleanup itself `await`s, that inner await *also* gets cancelled. Wrap it in `asyncio.shield()` so it runs to completion.
+A single delivered cancellation does not re-cancel later awaits, so cleanup usually runs fine. But if the task is cancelled *again* while an `except CancelledError` handler is awaiting (repeated `cancel()`, forced shutdown), that inner await also raises `CancelledError` and interrupts cleanup. Wrap the cleanup coroutine in `asyncio.shield()` so it runs to completion.
 
 ```python
     except asyncio.CancelledError:

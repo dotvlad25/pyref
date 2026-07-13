@@ -8,7 +8,7 @@ related: [permutations-combinations, accumulate, groupby, chain-islice, count-cy
 ---
 # itertools Overview
 
-`itertools` provides **lazy** iterator building blocks — nothing is computed until you consume it, so you iterate huge (or infinite) sequences with **O(1) memory**. Reach for it to replace nested loops and hand-rolled generators.
+`itertools` provides **lazy** iterator building blocks — nothing is computed until you consume it, so streaming tools (`chain`, `islice`, `accumulate`, `count`, ...) run in **O(1) memory**. Reach for it to replace nested loops and hand-rolled generators.
 
 ```python
 import itertools
@@ -17,7 +17,7 @@ import itertools
 Pick the tool by intent:
 
 ```python
-# --- Combinatorics (finite) ---
+# --- Combinatorics (finite) ---   # buffer the whole input into memory
 itertools.combinations(it, r)    # choose r, order irrelevant
 itertools.permutations(it, r)    # orderings of r
 itertools.product(it, repeat=n)  # cartesian product = nested loops
@@ -32,7 +32,7 @@ itertools.compress(data, mask)   # keep items where mask is truthy
 
 # --- Infinite (pair with zip / islice / takewhile) ---
 itertools.count(start, step)     # 0,1,2,... forever
-itertools.cycle(it)              # repeat sequence forever
+itertools.cycle(it)              # repeat sequence forever (buffers a copy)
 itertools.repeat(x, n)           # x, x, x ... (n times or forever)
 ```
 

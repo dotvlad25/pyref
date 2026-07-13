@@ -54,7 +54,7 @@ p = ctx.Process(target=work, args=("B", 100))
 
 ```python
 # spawn: target function + all args must be picklable (sent to child).
-#        Memory is COPIED immediately -> higher RAM, no shared globals.
+#        Parent memory is NOT inherited -> fresh interpreter, no shared globals.
 # fork:  inherits parent memory copy-on-write -> cheap reads of big data,
 #        but a lock/thread held at fork time can leave the child deadlocked.
 ```

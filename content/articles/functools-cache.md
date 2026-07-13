@@ -26,6 +26,8 @@ def grid_paths(r, c):
 
 - `maxsize=N` keeps an LRU cache of the last N distinct calls; `None` never evicts.
 - Arguments must be **hashable** (no lists/dicts — pass tuples/frozensets).
+- The cache keys on **all** args including keyword ones; `f(2)` and `f(x=2)` are distinct entries.
+- Decorating a **method** stores `self` in the key, so cached instances are never garbage-collected (memory leak with `maxsize=None`).
 - Inspect and reset:
 
 ```python
@@ -45,3 +47,5 @@ class Dataset:
     def stats(self):
         return expensive_scan(self.data)   # runs once, then cached on the instance
 ```
+
+Requires a writable instance `__dict__`, so it fails on classes using `__slots__` (unless `__dict__` is in the slots).

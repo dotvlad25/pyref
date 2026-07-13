@@ -44,6 +44,7 @@ with open("big.bin", "rb") as f:
 ```
 
 Gotchas:
-- Use binary mode (`"rb"`); in text mode `read(n)` counts **characters**, not bytes, and a chunk boundary can split a multi-byte character.
+- Use binary mode (`"rb"`); `read(n)` returns up to `n` **bytes**. In text mode `read(n)` counts **characters**, not bytes (so chunk size ≠ memory in bytes).
+- Text mode decodes safely and never splits a character; but if you `.decode()` each binary chunk on its own, a multi-byte char (e.g. UTF-8) can straddle a boundary and raise `UnicodeDecodeError`. Decode across chunks with `codecs.iterdecode` or an `IncrementalDecoder`.
 - The sentinel must match the mode: `b""` for binary, `""` for text.
 - Same pattern powers [file hashing](#file-hashing); for the whole file at once see [file I/O](#file-io).

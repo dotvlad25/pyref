@@ -4,11 +4,11 @@ title: Function Decorators
 keywords: [decorator, wrapper, closure, higher-order function, wraps, timing, logging, instrumentation, syntactic sugar, decorate]
 category: Language
 type: reference
-related: [decorators-with-args, functools-wraps, functools-cache, contextlib]
+related: [decorators-with-args, functools-wraps, functools-cache, closures, contextlib]
 ---
 # Function Decorators
 
-Reach for a decorator when you want to wrap a function with reusable behavior (timing, logging, caching, auth) without touching its body. A decorator is just a function that takes a function and returns a new one — built on a [closure](#decorators-with-args).
+Reach for a decorator when you want to wrap a function with reusable behavior (timing, logging, caching, auth) without touching its body. A decorator is just a function that takes a function and returns a new one — built on a [closure](#closures).
 
 ```python
 def my_decorator(func):

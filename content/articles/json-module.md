@@ -54,5 +54,5 @@ json.loads('{"x": 1}', object_hook=lambda d: d)
 Gotchas:
 - Invalid JSON raises `json.JSONDecodeError` (subclass of `ValueError`) — catch it.
 - Non-string dict keys are silently converted to strings on dump; `1` becomes `"1"`.
-- JSON has no comments, trailing commas, or `NaN`/`Infinity` by default (`allow_nan=True` emits them but that's non-standard).
+- JSON has no comments or trailing commas. `NaN`/`Infinity` are non-standard, yet Python emits/accepts them by default (`allow_nan=True`); pass `allow_nan=False` to raise `ValueError` on dump instead.
 - For flat tabular data use [CSV](#csv-module).

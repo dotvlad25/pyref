@@ -8,7 +8,7 @@ related: [mergesort, quickselect, sorting-key, binary-search]
 ---
 # Quicksort
 
-Reach for this when asked to *implement* sort by hand. **Avg O(n log n)**, **worst O(n²)** (already-sorted input with a bad pivot), **O(log n)** stack space, **in place**, **not stable**. In real code just call `sorted()` (Timsort) — see [sorting](#sorting-key).
+Reach for this when asked to *implement* sort by hand. **Avg O(n log n)**, **worst O(n²)** (already-sorted input with a bad pivot), avg **O(log n)** stack (worst **O(n)** depth), **in place**, **not stable**. In real code just call `sorted()` (Timsort) — see [sorting](#sorting-key).
 
 Pick a pivot, **partition** so smaller elements go left and larger go right, then recurse on each side.
 

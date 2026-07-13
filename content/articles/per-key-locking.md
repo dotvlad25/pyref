@@ -80,7 +80,7 @@ class StripedLocks:
 
 Per-key data and locks accumulate as keys come and go. Options:
 
-- **Lazy:** when a key's data becomes empty after pruning, delete the entry (and its lock) inline.
+- **Lazy:** when a key's data empties, delete its *data* entry inline. Deleting the **lock** is racy — another thread may already hold a reference and acquire it after a replacement is created, giving two live locks for one key; striping sidesteps this since its fixed locks are never deleted.
 - **Background sweep:** a [daemon thread](#daemon-threads) periodically removes idle keys under the map lock.
 - **LRU cap:** hold entries in an [`OrderedDict`](#ordereddict), evict the oldest past a size limit.
 

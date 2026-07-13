@@ -37,8 +37,10 @@ if   op == "+": r = a + b
 elif op == "-": r = a - b
 else:           raise ValueError(op)
 
-# Dict-as-switch (O(1) lookup) when branches map value -> action:
-r = {"+": a + b, "-": a - b}[op]
+# Dict-as-switch (O(1) lookup). Every value is built BEFORE the lookup, so
+# map to callables when branches have side effects or cost (only chosen one runs):
+import operator
+r = {"+": operator.add, "-": operator.sub}[op](a, b)
 ```
 
 Conditions use [truthiness](#truthiness): empty containers, `0`, `None`, `""` are falsy — no need for `len(x) > 0`.

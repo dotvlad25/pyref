@@ -56,8 +56,12 @@ except asyncio.CancelledError:
 ## TaskGroup (Python 3.11+) — the modern pattern
 
 ```python
-async with asyncio.TaskGroup() as tg:
-    tg.create_task(fetch("a"))
-    tg.create_task(fetch("b"))
-# all tasks awaited at block exit; if one fails, the rest are cancelled
+try:
+    async with asyncio.TaskGroup() as tg:
+        tg.create_task(fetch("a"))
+        tg.create_task(fetch("b"))
+    # all tasks awaited at block exit; if one fails, the rest are cancelled
+except* ValueError as eg:
+    # failures are re-raised together as an ExceptionGroup; catch with except*
+    print(eg.exceptions)
 ```

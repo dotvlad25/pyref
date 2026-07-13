@@ -40,7 +40,7 @@ f"{255:#x}"          # "0xff"     with prefix
 ## Handy f-string tricks
 
 ```python
-x = 42
+x, width = 42, 8
 f"{x=}"              # "x=42"     debug (3.8+) — prints name and value
 f"{name!r}"          # "'Alice'"  repr instead of str
 f"{count:>{width}}"  # nested field: width comes from a variable

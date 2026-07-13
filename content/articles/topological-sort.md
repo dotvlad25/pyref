@@ -26,7 +26,7 @@ def topo_sort(graph, nodes):
     while q:
         node = q.popleft()
         order.append(node)
-        for nb in graph[node]:
+        for nb in graph.get(node, ()):  # sink nodes may be absent as keys
             indegree[nb] -= 1          # "remove" the edge
             if indegree[nb] == 0:
                 q.append(nb)
@@ -49,7 +49,7 @@ def topo_dfs(graph, nodes):
     visited, order = set(), []
     def dfs(u):
         visited.add(u)
-        for v in graph[u]:
+        for v in graph.get(u, ()):
             if v not in visited:
                 dfs(v)
         order.append(u)         # add AFTER visiting all descendants
@@ -59,4 +59,4 @@ def topo_dfs(graph, nodes):
     return order[::-1]
 ```
 
-Kahn's also doubles as cycle detection — see [graph representation](#).
+Unlike Kahn's, this DFS version assumes a **DAG**: on a cyclic graph it silently returns an invalid order. Kahn's doubles as cycle detection — see [graph representation](#graph-representation).

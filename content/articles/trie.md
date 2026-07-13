@@ -61,4 +61,4 @@ def insert(word):
     node["$"] = True         # end-of-word marker
 ```
 
-Great when you want a Trie in a few lines. See [defaultdict](#).
+Great when you want a Trie in a few lines. Note: because every lookup on a `defaultdict` auto-creates missing keys, a naive `search`/`starts_with` on this version would silently insert empty nodes — use `dict.get`/`in` to probe without mutating. See [defaultdict](#defaultdict).

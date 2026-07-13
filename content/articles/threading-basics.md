@@ -8,7 +8,7 @@ related: [queue-module, thread-pool, gil, asyncio-basics, multiprocessing]
 ---
 # threading Basics
 
-Python threads are real OS threads, but the [GIL](#) means only one runs Python bytecode at a time. Use threads for **I/O-bound** work (network, disk); for CPU-bound work use [multiprocessing](#).
+Python threads are real OS threads, but the [GIL](#gil) means only one runs Python bytecode at a time. Use threads for **I/O-bound** work (network, disk); for CPU-bound work use [multiprocessing](#multiprocessing).
 
 ```python
 import threading
@@ -52,4 +52,4 @@ def increment():
         counter += 1
 ```
 
-Prefer the `with lock:` form — it always releases, even on exception. For a lock a thread may re-acquire, use `threading.RLock`. For higher-level parallelism, reach for a [thread pool](#).
+Prefer the `with lock:` form — it always releases, even on exception. For a lock a thread may re-acquire, use `threading.RLock`. For higher-level parallelism, reach for a [thread pool](#thread-pool).

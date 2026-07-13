@@ -60,16 +60,17 @@ async def main():
 ```
 
 - **Always re-raise** `CancelledError` after cleanup — swallowing it breaks cancellation.
+- `CancelledError` subclasses `BaseException` (3.8+), so a broad `except Exception:` won't catch it.
 - Never do heavy sync work in the `except` block without yielding.
 
-## Protecting cleanup with `shield`
+## Protecting an operation with `shield`
 
-If cleanup itself does `await`, that inner await also receives `CancelledError`. Wrap it in `shield` so it runs to completion:
+A single `task.cancel()` throws `CancelledError` only *once* (at the current `await`), so awaits inside your `except` block normally run to completion on their own. Use `asyncio.shield` to keep a critical op alive when the caller may be cancelled:
 
 ```python
-except asyncio.CancelledError:
-    await asyncio.shield(save_state_to_db())   # immune to the outer cancellation
-    raise
+result = await asyncio.shield(save_state_to_db())   # keeps running if we're cancelled
 ```
+
+If the current task is cancelled, this line still *raises* `CancelledError` — but the shielded coroutine keeps running in the background to completion.
 
 See [TaskGroup](#taskgroup) for structured cancellation of task groups.

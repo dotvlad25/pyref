@@ -35,8 +35,8 @@ min((x for x in nums if x > 100), default=None)
 ```python
 nums = [0, 0, 3, 0]
 any(nums)                    # True  (>=1 truthy)
-any(x > 5 for x in nums)     # False (stops at first True)
-all(x > 0 for x in [1, 2, 3])  # True (stops at first False)
+any(x > 2 for x in nums)     # True  (stops at first match: 3)
+all(x > 0 for x in [1, 0, 3])  # False (stops at first 0)
 all([])                      # True  (vacuous)
 any([])                      # False
 ```

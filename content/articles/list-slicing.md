@@ -44,9 +44,11 @@ copy = lst[:]        # shallow copy of the whole list (same as lst.copy())
 
 ```python
 a = [1, 2, 3, 4, 5]
-a[1:3] = [20, 30, 40]   # [1, 20, 30, 40, 4, 5]  (lengths need not match)
+a[1:3] = [20, 30, 40]   # [1, 20, 30, 40, 4, 5]  (contiguous: lengths need not match)
 a[:] = [9]              # clear + refill, keeps same object/aliases
 del a[::2]              # delete every other element
 ```
+
+Extended (step != 1) slice assignment requires an **equal-length** RHS, else `ValueError`: `a[::2] = [0, 0]` only works if `a[::2]` has exactly 2 elements.
 
 Out-of-range slices never raise: `lst[100:200]` returns `[]`. Full reversal options in [Reversing Sequences](#reversing-sequences).

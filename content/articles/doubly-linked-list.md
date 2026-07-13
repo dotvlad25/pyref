@@ -8,7 +8,7 @@ related: [lru-cache, linked-list, deque]
 ---
 # Doubly Linked List
 
-Each node points both ways, so you can remove or insert a node in **O(1)** given a reference to it. The classic use is the recency list inside an [LRU cache](#).
+Each node points both ways, so you can remove or insert a node in **O(1)** given a reference to it. The classic use is the recency list inside an [LRU cache](#lru-cache).
 
 Use **sentinel** (dummy) head and tail nodes to eliminate null-checks at the boundaries.
 

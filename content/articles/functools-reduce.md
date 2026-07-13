@@ -4,7 +4,7 @@ title: functools.reduce
 keywords: [functools, reduce, fold, foldl, accumulate, initializer, aggregate, running total, left fold]
 category: Standard Library
 type: reference
-related: [functools-cache, functools-partial, math-module, sorting-key]
+related: [accumulate, functools-cache, functools-partial, math-module, sorting-key]
 ---
 # functools.reduce
 
@@ -41,4 +41,4 @@ import math; math.prod(nums)      # 3.8+, not reduce(mul, ...)
 "".join(words)            # not reduce(str.__add__, ...) — O(n^2)!
 ```
 
-Prefer an explicit loop or a comprehension when the lambda gets hard to read — clarity beats cleverness. For a running list of partial results instead of one value, use [itertools.accumulate](#bisect). Complexity: O(n) calls.
+Prefer an explicit loop or a comprehension when the lambda gets hard to read — clarity beats cleverness. For a running list of partial results instead of one value, use [itertools.accumulate](#accumulate). Complexity: O(n) calls.

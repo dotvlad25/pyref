@@ -8,7 +8,7 @@ related: [itertools-overview, count-cycle-repeat, accumulate, deque]
 ---
 # chain, islice, tee
 
-Three iterator plumbing tools: **concatenate**, **slice**, and **duplicate** — all lazy, all **O(1)** memory unless you materialize.
+Three iterator plumbing tools: **concatenate**, **slice**, and **duplicate** — all lazy. `chain`/`islice` are **O(1)** memory; `tee` buffers (see gotcha).
 
 ## chain — flatten / concatenate
 

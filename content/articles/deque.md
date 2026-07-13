@@ -37,11 +37,14 @@ for x in range(5):
 ## As a queue (FIFO) — the BFS pattern
 
 ```python
+seen = {start}
 q = deque([start])
 while q:
-    node = q.popleft()      # O(1)
+    node = q.popleft()          # O(1); list.pop(0) would be O(N)
     for nb in graph[node]:
-        q.append(nb)
+        if nb not in seen:      # a visited set is required to avoid cycles
+            seen.add(nb)
+            q.append(nb)
 ```
 
-For a thread-safe queue across threads, use the [`queue` module](#) instead.
+For a thread-safe queue across threads, use the [`queue` module](#queue-module) instead.

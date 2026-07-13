@@ -43,7 +43,7 @@ A bare mutable default (`= []`) raises `ValueError` — the decorator blocks the
 class Ver:                  # compares as a tuple of fields, in order
     major: int
     minor: int
-sorted([Ver(1, 2), Ver(1, 0)])   # [Ver(1,0), Ver(1,1)...]
+sorted([Ver(1, 2), Ver(1, 0)])   # [Ver(1,0), Ver(1,2)]
 
 @dataclass(frozen=True)     # immutable + hashable → usable in sets/dict keys
 class Coord:

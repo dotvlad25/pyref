@@ -32,6 +32,8 @@ re.sub(r"\bfoo\b", "bar", "foo food")         # "bar food"
 
 ```python
 re.split(r"\s+", "a  b\tc\nd")   # ['a', 'b', 'c', 'd']  split on any run
+re.split(r"\s+", " a b ")        # ['', 'a', 'b', '']  leading/trailing '' tokens!
+" a b ".split()                  # ['a', 'b']  str.split() strips ends, no regex
 re.sub(r"\s+", " ", "a   b").strip()   # "a b"  collapse whitespace
 ```
 

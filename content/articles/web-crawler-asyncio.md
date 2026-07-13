@@ -73,9 +73,9 @@ async def _crawl(start_url: Url, provider: LinkProvider,
 ## The three things that make it correct
 
 - **No lock — and know why.** The event loop runs one coroutine at a time, and there's **no `await` between `if link not in seen` and `seen.add(link)`**. That makes check-and-add atomic *by construction* — a coroutine can only be suspended at an `await`. The [threadpool version](#web-crawler-threadpool) needs a lock for the same lines because OS threads can preempt anywhere. Same code, safe for a different reason.
-- **`asyncio.to_thread` for the blocking call.** `provider.get_links` is synchronous I/O. Calling it directly would [block the event loop](#blocking-the-event-loop) and serialize everything. Offloading to a thread lets other workers run while this one waits. See [asyncio.to_thread](#asyncio-to-thread).
+- **`asyncio.to_thread` for the blocking call.** `provider.get_links` is synchronous I/O. Calling it directly would [block the event loop](#blocking-the-event-loop) and serialize everything. Offloading to a thread lets other workers run while this one waits. Note: `to_thread` uses the loop's default executor, capped at `min(32, os.cpu_count() + 4)` threads — so raising `concurrency` past that just parks extra workers waiting for a thread slot. See [asyncio.to_thread](#asyncio-to-thread).
 - **Cancel instead of sentinels.** After `join()`, the workers are parked on `await frontier.get()`. Cancelling a coroutine there is clean — no `None` sentinels required. `gather(..., return_exceptions=True)` swallows the resulting `CancelledError`s.
 
 ## Threadpool vs asyncio here
 
-Both are correct for this I/O-bound task. Asyncio scales to far more concurrent fetches (coroutines are cheaper than threads) and needs no lock, but requires an async-friendly structure. The [threadpool version](#web-crawler-threadpool) is simpler to reach for if the rest of your code is synchronous.
+Both are correct for this I/O-bound task, and both fetch through a thread pool here (via `to_thread`), so fetch parallelism is comparable. Asyncio wins on scale only when the fetch itself is natively async (e.g. `aiohttp`), where coroutines are far cheaper than threads; it also needs no lock, but requires an async-friendly structure. The [threadpool version](#web-crawler-threadpool) is simpler to reach for if the rest of your code is synchronous.

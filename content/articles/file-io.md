@@ -39,7 +39,7 @@ line  = f.readline()                # single line, '' at EOF
 
 ```python
 # with handles multiple files at once
-with open("in.txt") as src, open("out.txt", "w") as dst:
+with open("in.txt", encoding="utf-8") as src, open("out.txt", "w", encoding="utf-8") as dst:
     dst.write(src.read())
 ```
 

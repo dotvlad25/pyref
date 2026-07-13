@@ -103,6 +103,6 @@ For 1000 files averaging 2 GB:
 ## Edge cases worth noting
 
 - **Hash choice:** MD5 is fine and fast for dedup; use SHA-256 if collision-paranoid, or a final byte-for-byte compare to confirm.
-- **Hardlinks:** same `os.stat().st_ino` = the same physical file, not a real duplicate — group by inode first to skip.
+- **Hardlinks:** same `(st_ino, st_dev)` = the same physical file, not a real duplicate — group by that pair first to skip (inode numbers repeat across filesystems, so `st_dev` is required).
 - **Symlinks:** `os.path.isfile` follows them; use `os.path.islink` to detect and skip.
 - **Files changing mid-scan:** a TOCTOU race between `stat` and read — treat dedup as advisory, or re-hash to confirm a final group.

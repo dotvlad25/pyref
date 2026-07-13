@@ -27,8 +27,9 @@ What it catches:
 # 1) Un-awaited coroutine: you called it but never awaited/create_task'd it.
 async def work(): ...
 async def main():
-    work()          # BUG: does nothing. Debug prints:
+    work()          # BUG: does nothing. Warns when the coroutine is GC'd:
     # RuntimeWarning: coroutine 'work' was never awaited
+    # (fires without debug too; debug adds the creation-site traceback)
     await work()    # correct
 
 # 2) Slow / blocking callbacks: debug mode logs a warning when a single

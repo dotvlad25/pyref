@@ -54,6 +54,7 @@ def crawl_same_host(start_url: Url, provider: LinkProvider) -> set[Url]:
 - **Add to `seen` on discovery, not on visit** — prevents the same URL being queued twice before it's processed (the classic BFS dedup rule).
 - **`urlparse(url).hostname`**, not `.netloc` — `hostname` is lowercased and strips any `user:pass@` and `:port`, so host comparison is clean. See [URL parsing](#url-parsing).
 - **Swallow per-page errors** so one dead link/timeout doesn't kill the whole crawl.
+- **Dedup keys are exact strings** — `http://h/p`, `http://h/p#frag`, and `http://h/p/` won't collapse. Normalize each URL (strip the fragment, etc.) before adding to `seen`, or equivalent pages get fetched repeatedly.
 - **Complexity:** O(V + E) over pages and links; O(V) space for `seen`.
 
 ## Follow-up: "make it concurrent"

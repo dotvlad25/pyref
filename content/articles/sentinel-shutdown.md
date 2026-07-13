@@ -4,7 +4,7 @@ title: Sentinel Pattern for Graceful Shutdown
 keywords: [sentinel value, graceful shutdown, poison pill, none sentinel, object sentinel, stop worker threads, queue shutdown, producer consumer exit, task_done]
 category: Concurrency
 type: pattern
-related: [producer-consumer, queue-module, sentinel-shutdown, daemon-threads, thread-pool, asyncio-queue]
+related: [producer-consumer, queue-module, daemon-threads, thread-pool, asyncio-queue]
 ---
 # Sentinel Pattern for Graceful Shutdown
 
@@ -49,4 +49,4 @@ _SHUTDOWN = object()                # unique identity, can't clash with data
         break
 ```
 
-Each `object()` is distinct by identity ([is vs ==](#is-vs-equals)), so a fresh per-pool sentinel can never equal a real payload. Use one sentinel object shared across a pool, but enqueue it N times — once per worker. See [graceful-shutdown-sentinel](#sentinel-shutdown) for the asyncio variant.
+Each `object()` is distinct by identity ([is vs ==](#is-vs-equals)), so a fresh per-pool sentinel can never equal a real payload. Use one sentinel object shared across a pool, but enqueue it N times — once per worker. See [asyncio-queue](#asyncio-queue) for the asyncio variant.

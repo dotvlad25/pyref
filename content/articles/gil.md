@@ -30,4 +30,4 @@ The GIL is a mutex in CPython that lets **only one thread execute Python bytecod
 
 ## Note
 
-The GIL protects the *interpreter's* internal state, **not your data** — you still need [locks](#) for shared mutable state. Ongoing work (PEP 703) aims to make the GIL optional in future CPython, but as of 3.12 it's the default.
+The GIL protects the *interpreter's* internal state, **not your data** — you still need [locks](#) for shared mutable state. PEP 703 adds an optional free-threaded (no-GIL) build, available since 3.13 (experimental) and officially supported in 3.14; the standard build still enables the GIL by default.

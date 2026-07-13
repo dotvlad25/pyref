@@ -106,6 +106,7 @@ Same structure, but async primitives — and never `time.sleep`, which would [bl
 
 ```python
 async def acquire(self):
+    loop = asyncio.get_running_loop()
     async with self.lock:                 # asyncio.Lock
         now = loop.time()
         slot = max(now, self.next_slot)

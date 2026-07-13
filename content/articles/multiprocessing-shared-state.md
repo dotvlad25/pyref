@@ -44,7 +44,7 @@ if __name__ == '__main__':
     print(counter.value)                 # 100 (thanks to get_lock)
 ```
 
-Typecodes match `array` module: `'i'` int, `'d'` double, `'b'` byte. Without `get_lock()` concurrent writes overwrite each other — same as thread [race-conditions](#race-conditions).
+Typecodes match `array` module: `'i'` int, `'d'` double, `'b'` byte. Without `get_lock()` concurrent writes overwrite each other — same as thread [race-conditions](#race-conditions). For mutable Python objects (dict/list), use a `multiprocessing.Manager()` proxy: `m = Manager(); d = m.dict()` — slower (each op is a serialized IPC round-trip via a server process) but flexible.
 
 ## shared_memory — zero-copy for large buffers (3.8+)
 

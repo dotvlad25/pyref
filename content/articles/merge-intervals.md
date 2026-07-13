@@ -12,6 +12,8 @@ Reach for this whenever the problem gives you `[start, end]` ranges and asks to 
 
 ```python
 def merge(intervals):
+    if not intervals:                         # guard empty input
+        return []
     intervals.sort(key=lambda x: x[0])        # sort by start
     merged = [intervals[0]]
     for start, end in intervals[1:]:

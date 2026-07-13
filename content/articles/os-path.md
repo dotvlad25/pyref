@@ -16,6 +16,7 @@ Manipulate filesystem paths as strings, portably (handles the OS separator for y
 import os
 
 os.path.join("dir", "sub", "file.txt")   # "dir/sub/file.txt" (OS-correct separator)
+os.path.join("dir", "/abs")              # "/abs" — an absolute part discards earlier ones
 
 p = "/home/vlad/report.pdf"
 os.path.basename(p)     # "report.pdf"   — final component
@@ -24,7 +25,7 @@ os.path.split(p)        # ("/home/vlad", "report.pdf")  — both at once
 os.path.splitext(p)     # ("/home/vlad/report", ".pdf") — name / extension
 ```
 
-`splitext` is the clean way to get an extension: `os.path.splitext(p)[1]` → `".pdf"`.
+`splitext` is the clean way to get an extension: `os.path.splitext(p)[1]` → `".pdf"`. A leading dot in the basename is treated as part of the name, not an extension: `os.path.splitext("/x/.bashrc")` → `("/x/.bashrc", "")`.
 
 ## Normalize and resolve
 

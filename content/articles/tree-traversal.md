@@ -8,7 +8,7 @@ related: [binary-tree, tree-level-order, bst, validate-bst, stack, dfs]
 ---
 # Tree Traversals
 
-Three depth-first orders — the foundation of almost every tree problem. All are **O(n)** time.
+Three depth-first orders — the foundation of almost every tree problem. Each visits every node once. Note: the concise `+`-concatenation forms below rebuild lists at each level, so they are **O(n²)** worst case; append into a shared list (or use the iterative forms) for true **O(n)**.
 
 ```python
 # Inorder:   left -> root -> right   (BST => sorted order)

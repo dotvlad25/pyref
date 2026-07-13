@@ -29,6 +29,8 @@ for item in items:
 ## Examples
 
 ```python
+import os
+
 # Group files by size (the duplicate-finder's first tier)
 by_size = defaultdict(list)
 for path in paths:

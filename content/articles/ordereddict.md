@@ -31,11 +31,17 @@ All key ops (`get`/`set`/`del`/`move_to_end`/`popitem`) are **O(1)**.
 
 ## Why it matters for LRU
 
-`move_to_end` + `popitem(last=False)` is exactly the primitive an [LRU cache](#) needs — recency tracking with O(1) eviction of the oldest entry.
+`move_to_end` + `popitem(last=False)` is exactly the primitive an [LRU cache](#lru-cache) needs — recency tracking with O(1) eviction of the oldest entry.
 
 ## Order-sensitive equality
 
 ```python
 OrderedDict([("a", 1), ("b", 2)]) == OrderedDict([("b", 2), ("a", 1)])  # False
 dict([("a", 1), ("b", 2)])        == dict([("b", 2), ("a", 1)])         # True
+```
+
+Order-sensitivity only applies when **both** sides are `OrderedDict`. Comparing an `OrderedDict` to a plain `dict` is order-insensitive:
+
+```python
+OrderedDict([("a", 1), ("b", 2)]) == {"b": 2, "a": 1}  # True
 ```

@@ -57,5 +57,5 @@ def count_components(graph, nodes):
 
 ## BFS vs DFS
 
-- **Shortest path (unweighted)** → [BFS](#).
+- **Shortest path (unweighted)** → [BFS](#bfs).
 - **Explore all / detect cycles / topological order / backtracking** → DFS.

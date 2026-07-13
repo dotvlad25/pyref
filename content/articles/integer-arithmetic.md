@@ -14,7 +14,10 @@ Python ints are **arbitrary precision** — they never overflow. `2 ** 1000` jus
 # Floor division floors toward -inf (differs from C++/Java!)
 7 // 2      # 3
 -7 // 2     # -4   (C++ truncates toward 0 -> -3)
-int(-7 / 2) # -3   (emulate C++ truncation)
+int(-7 / 2) # -3   (emulate C++ truncation; but / is float — loses precision for huge ints)
+# exact trunc toward 0 for big ints:
+a, b = -7, 2
+(abs(a) // abs(b)) * (1 if (a < 0) == (b < 0) else -1)  # -3
 
 # Modulo takes the sign of the DIVISOR in Python
 -7 % 3      # 2    (always non-negative for positive divisor; C++ gives -1)

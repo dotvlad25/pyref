@@ -33,7 +33,7 @@ class Circle(Shape):
 
 class Broken(Shape):
     pass
-# Broken()  → TypeError: abstract method 'area' not implemented
+# Broken()  → TypeError: Can't instantiate abstract class Broken ...
 Circle(2).describe()                    # 'area=12.566...'
 ```
 

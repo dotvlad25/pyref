@@ -36,7 +36,7 @@ pool = threading.BoundedSemaphore(3)        # raises ValueError if release() ove
 `BoundedSemaphore` catches the classic bug where an extra `release()` silently inflates capacity above the intended limit. Use it unless you deliberately need the counter to grow.
 
 ```python
-sem = threading.Semaphore(3)
+sem = threading.BoundedSemaphore(3)
 if sem.acquire(timeout=1.0):                # non-blocking-ish: False if no permit in time
     try:
         ...

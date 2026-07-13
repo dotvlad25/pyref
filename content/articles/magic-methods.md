@@ -54,6 +54,11 @@ len(v)                # 2              — __len__
 
 # __repr__ vs __str__: __repr__ is the debug/unambiguous form and the
 # fallback when __str__ is missing. Always define __repr__ at minimum.
+
+# Comparison/arithmetic dunders should `return NotImplemented` (not raise)
+# for unsupported operand types, so Python can try the reflected op and
+# `==` can fall back to identity. As written, Vec(1, 2) == 5 raises
+# AttributeError; guard with `if not isinstance(other, Vec): return NotImplemented`.
 ```
 
 Other useful dunders: `__iter__`/`__next__` (looping), `__getitem__` (indexing/`obj[k]`), `__contains__` (`in`), `__call__` (callable objects), `__bool__` (truthiness). For the full ordering set from just `__eq__`+`__lt__`, see [`total_ordering`](#comparable-objects).

@@ -73,6 +73,6 @@ class ProgressTracker:
 
 ## Notes
 
-- Use [`logging`](#logging), not `print` — it's leveled, timestamped, and thread-safe.
+- Use [`logging`](#logging), not `print` — it's leveled, timestamped, and thread-safe. INFO is silent by default; call `logging.basicConfig(level=logging.INFO)` once to see the progress lines.
 - In practice you'd often just wrap the `as_completed` iterator in `tqdm(as_completed(futures), total=total)` for a progress bar.
 - Rule of thumb: **aggregate results where they converge** (the main thread) to avoid locking; only lock the truly shared, concurrently-mutated state.

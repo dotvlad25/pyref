@@ -22,7 +22,7 @@ def dijkstra(graph, start):
         d, node = heapq.heappop(pq)
         if d > dist.get(node, float("inf")):
             continue                     # stale entry — already found better
-        for nb, w in graph[node]:
+        for nb, w in graph.get(node, ()):   # .get avoids KeyError on sink nodes
             nd = d + w
             if nd < dist.get(nb, float("inf")):
                 dist[nb] = nd

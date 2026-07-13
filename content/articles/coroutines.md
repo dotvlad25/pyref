@@ -24,7 +24,7 @@ asyncio.run(async_sleep())   # this actually runs it
 ```
 
 - `await` is only valid inside `async def`. It means "pause here, run other tasks, resume when this awaitable finishes."
-- Forgetting to await a coroutine: it never runs. In debug mode you get `RuntimeWarning: coroutine 'x' was never awaited`.
+- Forgetting to await a coroutine: it never runs. When the coroutine object is garbage-collected you get `RuntimeWarning: coroutine 'x' was never awaited` (emitted regardless of debug mode; debug mode adds the creation traceback).
 
 ## Scheduling vs. calling
 

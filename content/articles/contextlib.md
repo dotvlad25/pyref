@@ -1,7 +1,7 @@
 ---
 id: contextlib
 title: contextlib & @contextmanager
-keywords: [contextlib, contextmanager, generator, yield, suppress, ExitStack, closing, nullcontext, context manager, with, cleanup, decorator]
+keywords: [contextlib, contextmanager, asynccontextmanager, generator, yield, suppress, ExitStack, closing, nullcontext, context manager, with, cleanup, decorator]
 category: Standard Library
 type: reference
 related: [context-managers, decorators, functools-wraps]
@@ -59,4 +59,4 @@ cm = open(path) if path else nullcontext(sys.stdout)  # optional resource
 with cm as f: ...                     # nullcontext is a no-op manager
 ```
 
-`@contextmanager` also makes the function usable as a decorator (since Python 3.2, via `ContextDecorator`). For the raw `__enter__`/`__exit__` protocol, see [context managers](#context-managers).
+`@contextmanager` also makes the function usable as a decorator (since Python 3.2, via `ContextDecorator`). For async setup/teardown, `asynccontextmanager` builds an `async with` manager from an `async def` generator. For the raw `__enter__`/`__exit__` protocol, see [context managers](#context-managers).

@@ -48,8 +48,11 @@ with ThreadPoolExecutor() as pool:
 from concurrent.futures import ProcessPoolExecutor
 # Identical interface, but each worker is a separate process:
 # use for CPU-bound work to bypass the GIL.
-with ProcessPoolExecutor() as pool:
-    results = list(pool.map(cpu_heavy, chunks))
+# cpu_heavy and its args must be picklable (top-level function);
+# on spawn platforms (Windows/macOS) guard the entry point:
+if __name__ == "__main__":
+    with ProcessPoolExecutor() as pool:
+        results = list(pool.map(cpu_heavy, chunks))
 ```
 
 Rule of thumb: `ThreadPoolExecutor` for I/O-bound, `ProcessPoolExecutor` for CPU-bound. See [multiprocessing](#) and the [GIL](#).

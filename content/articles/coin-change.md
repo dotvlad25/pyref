@@ -24,7 +24,7 @@ def coin_change(coins, amount):
         return min(dp(rem - c) + 1 for c in coins)
     ans = dp(amount)
     return ans if ans != float('inf') else -1
-# O(amount * len(coins)) time and space
+# O(amount * len(coins)) time, O(amount) space (one cached state per rem)
 ```
 
 Bottom-up tabulation (no recursion limit):

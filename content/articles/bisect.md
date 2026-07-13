@@ -44,7 +44,9 @@ first_ge = a[i] if i < len(a) else None
 
 **Search with a key (Python 3.10+):**
 ```python
-i = bisect.bisect_left(records, target, key=lambda r: r.timestamp)
+# key is applied to list items only — the 2nd arg must be the key value,
+# not a record. Pass the timestamp itself:
+i = bisect.bisect_left(records, target_ts, key=lambda r: r.timestamp)
 ```
 
 For grade-boundary style lookups, `bisect` maps a value to a bucket in one call — cleaner than chained `if`.

@@ -14,7 +14,7 @@ Reach for `Path` for all path building — object-oriented, chainable, and cross
 from pathlib import Path
 
 p = Path("/var") / "log" / "app.log"   # `/` joins — no os.path.join needed
-p = Path("data").joinpath("raw", "x.csv")
+Path("data").joinpath("raw", "x.csv")  # Path("data/raw/x.csv") — multi-arg join
 
 # Path components
 p.name      # "app.log"      p.stem    # "app"

@@ -28,7 +28,8 @@ def apply_action(img, step):
     if action == "crop":
         return img.crop((step["left"], step["top"], step["right"], step["bottom"]))
     if action == "flip":
-        flip = Image.FLIP_LEFT_RIGHT if step["direction"] == "horizontal" else Image.FLIP_TOP_BOTTOM
+        flip = (Image.Transpose.FLIP_LEFT_RIGHT if step["direction"] == "horizontal"
+                else Image.Transpose.FLIP_TOP_BOTTOM)
         return img.transpose(flip)
     if action == "grayscale":
         return img.convert("L")

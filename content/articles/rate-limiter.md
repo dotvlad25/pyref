@@ -35,7 +35,7 @@ class FixedWindowRateLimiter:
         return False
 ```
 
-**The edge case:** a key can send `N` at `0:59` and `N` more at `1:00` — `2N` in ~1 second, because the counter resets on the boundary. O(1) time and memory, but bursty.
+**The edge case:** a key can send `N` at `0:59` and `N` more at `1:00` — `2N` in ~1 second, because the counter resets on the boundary. O(1) time and memory, but bursty. (Uses `time.time()` deliberately, to align windows to the wall clock; the elapsed-time algorithms below use `time.monotonic()` instead.)
 
 ## Sliding window log — exact
 
@@ -52,7 +52,7 @@ class SlidingWindowRateLimiter:
         self.hits = defaultdict(deque)         # key -> timestamps
 
     def allow(self, key):
-        now = time.time()
+        now = time.monotonic()                 # elapsed time, never runs backward
         cutoff = now - self.window
         q = self.hits[key]
         while q and q[0] <= cutoff:            # drop expired timestamps
@@ -79,7 +79,7 @@ class TokenBucketRateLimiter:
         self.buckets = {}                              # key -> (tokens, last_time)
 
     def allow(self, key):
-        now = time.time()
+        now = time.monotonic()                            # elapsed-time clock
         tokens, last = self.buckets.get(key, (self.cap, now))
         tokens = min(self.cap, tokens + (now - last) * self.rate)   # refill
         if tokens >= 1:

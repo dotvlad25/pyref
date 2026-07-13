@@ -63,4 +63,21 @@ def move_zeros(nums):
             write += 1
 ```
 
-When the window size varies with a condition, reach for [sliding window](#) instead.
+## Partition — Dutch national flag (sort 0/1/2)
+
+```python
+def sort_012(nums):
+    lo, mid, hi = 0, 0, len(nums) - 1
+    while mid <= hi:
+        if nums[mid] == 0:
+            nums[lo], nums[mid] = nums[mid], nums[lo]
+            lo += 1
+            mid += 1
+        elif nums[mid] == 1:
+            mid += 1
+        else:                         # == 2
+            nums[mid], nums[hi] = nums[hi], nums[mid]
+            hi -= 1                   # don't advance mid: swapped-in value unchecked
+```
+
+When the window size varies with a condition, reach for [sliding window](#sliding-window) instead.

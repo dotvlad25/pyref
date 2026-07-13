@@ -38,11 +38,11 @@ Because sort is stable, you can also sort in passes (least significant first).
 ## The negation trick — mixed directions
 
 ```python
-# age ascending, but name DESCENDING within same age? Negate what you can:
-sorted(people, key=lambda p: (p.age, ))                 # numeric: negate -> -p.age
-# For strings you can't negate; sort in two stable passes instead:
-people.sort(key=lambda p: p.name, reverse=True)
-people.sort(key=lambda p: p.age)                        # final key wins as primary
+# age ascending, score DESCENDING within same age (both numeric): negate the numeric key
+sorted(people, key=lambda p: (p.age, -p.score))
+# strings can't be negated; use two stable passes (secondary first, primary last):
+people.sort(key=lambda p: p.name, reverse=True)         # name descending
+people.sort(key=lambda p: p.age)                        # age ascending wins as primary
 ```
 
 ## operator helpers (faster, cleaner)

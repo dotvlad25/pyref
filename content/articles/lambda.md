@@ -47,6 +47,12 @@ list(filter(lambda x: x % 2 == 0, range(6)))   # [0, 2, 4]
 
 key=lambda w: w.lower     # BUG: passes the method, not its result
 key=lambda w: w.lower()   # call it!
+
+# Late binding: a lambda captures the variable, not its value at creation.
+fs = [lambda: i for i in range(3)]
+[f() for f in fs]         # [2, 2, 2]  -- all see the final i
+fs = [lambda i=i: i for i in range(3)]
+[f() for f in fs]         # [0, 1, 2]  -- bind now via default arg
 ```
 
 When the key needs more than one expression or precomputed data (like a frequency map), use a [nested function](#nested-functions) instead. See [sorting-key](#sorting-key) for the full sort toolkit.

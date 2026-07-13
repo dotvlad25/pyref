@@ -16,6 +16,8 @@ To put custom objects in a `set`/`dict` or sort them, implement the right dunder
 class Point:
     def __init__(self, x, y): self.x, self.y = x, y
     def __eq__(self, other):
+        if not isinstance(other, Point):
+            return NotImplemented          # unlike types → let Python fall back (avoids AttributeError)
         return (self.x, self.y) == (other.x, other.y)
     def __hash__(self):
         return hash((self.x, self.y))     # equal objects → equal hashes

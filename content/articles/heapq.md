@@ -43,4 +43,4 @@ heapq.nsmallest(3, nums)     # 3 smallest
 heapq.nlargest(3, people, key=lambda p: p.age)   # with key
 ```
 
-For carrying a payload alongside the priority, see [heap with tuples](#). For the running-median pattern, see [two-heap median](#).
+For carrying a payload alongside the priority, see [heap with tuples](#heap-tuples). For the running-median pattern, see [two-heap median](#two-heap-median).

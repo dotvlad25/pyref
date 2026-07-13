@@ -61,4 +61,4 @@ class Bag:
     # if no __bool__, Python falls back to __len__() != 0
 ```
 
-Use `any(iterable)` / `all(iterable)` to fold truthiness over a sequence (short-circuiting, O(n)).
+Use `any(iterable)` / `all(iterable)` to fold truthiness over a sequence (short-circuiting, O(n)). On an empty iterable `all([])` is `True` and `any([])` is `False`.

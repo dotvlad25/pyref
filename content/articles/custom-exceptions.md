@@ -24,9 +24,11 @@ An empty subclass is fully usable — inherited `__init__` stores the message.
 ```python
 class HTTPError(Exception):
     def __init__(self, status, message):
-        super().__init__(f"{status}: {message}")   # sets str(e)
-        self.status = status                        # extra attributes
+        super().__init__(status, message)  # store raw args -> picklable
+        self.status = status
         self.message = message
+    def __str__(self):
+        return f"{self.status}: {self.message}"
 
 try:
     raise HTTPError(404, "not found")
@@ -34,6 +36,11 @@ except HTTPError as e:
     print(e.status)     # 404
     print(e)            # 404: not found
 ```
+
+Pass the raw values to `super().__init__` (they land in `e.args`), not a
+pre-formatted string. This keeps the exception picklable/copyable — needed
+when it crosses process boundaries (`multiprocessing`, `concurrent.futures`).
+Use `__str__` for the human-readable form.
 
 ## Build a hierarchy (catch broadly or narrowly)
 
@@ -44,7 +51,7 @@ class AppError(Exception):          # common base for the whole app
 class NotFoundError(AppError):
     pass
 
-class PermissionError(AppError):
+class AccessDeniedError(AppError):   # avoid shadowing built-in PermissionError
     pass
 
 try:

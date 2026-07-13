@@ -8,9 +8,9 @@ related: [trie, dict, set, string-methods, recursion-memoization]
 ---
 # Greedy Longest-Match Tokenizer
 
-Segment text by repeatedly taking the **longest vocabulary token** that matches at the current position (maximal-munch). This is essentially how subword tokenizers (BPE/WordPiece) do *inference*.
+Segment text by repeatedly taking the **longest vocabulary token** that matches at the current position (maximal-munch). This is essentially how WordPiece does *inference*.
 
-## Set lookup — O(n · M)
+## Set lookup — O(n · M²)
 
 Try lengths from longest to shortest at each position (`M` = longest vocab word):
 
@@ -80,12 +80,12 @@ def tokenize_trie(text, vocab):
 
 ## Relation to real tokenizers
 
-- **BPE** — trained by merging frequent adjacent pairs; inference is greedy longest-match against the learned vocab (this article).
-- **WordPiece** (BERT) — greedy too, but scores candidates by likelihood, not just length.
-- **SentencePiece** — adds byte-level fallback so any Unicode is representable.
-- **All tokenizations** (not just greedy) — DP where `dp[i]` = ways to segment `text[:i]`; greedy isn't always optimal for downstream models.
+- **WordPiece** (BERT) — inference *is* greedy longest-match against the vocab, exactly this article (with a `##` prefix on non-initial pieces).
+- **BPE** — trained by merging frequent adjacent pairs; inference applies the learned merges in rank order, not longest-match.
+- **Unigram / SentencePiece** — scores segmentations by likelihood and picks the best (Viterbi), so it is *not* greedy; adds byte-level fallback so any Unicode is representable.
+- **All tokenizations** — DP where `dp[i]` = ways to segment `text[:i]`; greedy longest-match isn't always optimal for downstream models.
 
 ## Notes
 
-- Set version is O(n·M) with substring slicing; trie is O(n·L) in the actual match length and skips slicing on misses.
+- Set version is O(n·M²): each position tries up to M substrings, and slicing plus string hashing cost O(length). Trie is O(n·L) in the actual match length and skips slicing on misses.
 - Unicode: iterate over code points (Python `str` already does) and consider `unicodedata.normalize("NFC", text)` before tokenizing.

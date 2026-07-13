@@ -8,7 +8,7 @@ related: [string-methods, string-split-join, string-basics]
 ---
 # Substring Search
 
-Reach for these to locate or test for a substring. All run in O(n*m) worst case (CPython uses a fast search internally).
+Reach for these to locate or test for a substring. Since CPython 3.10 the internal search is worst-case O(n+m) (two-way algorithm); older versions could hit O(n*m).
 
 ## `in` — the membership test
 

@@ -43,11 +43,17 @@ else:
 
 **Heisenbug**: a bug that vanishes or changes when you probe it. Standard `pdb` pauses the *entire* interpreter, altering thread timing and interleaving — it masks the very race you hunt. Prefer logging.
 
+```python
+# faulthandler dumps all thread stacks. -X faulthandler only fires on a
+# crash/fatal signal — for a HANG, schedule a dump yourself:
+import faulthandler
+faulthandler.dump_traceback_later(10, repeat=True)  # every 10s, print all stacks
+```
+
 ```bash
 # Thread-aware tools (better than pdb for concurrency):
-python -X faulthandler script.py   # dumps all thread stacks on hang/deadlock
 py-spy dump --pid 12345            # sampling profiler; inspect live stacks, no restart
 py-spy top --pid 12345             # live per-thread CPU view
 ```
 
-Checklist: prefer [logging](#thread-exceptions) over print, name threads, add [acquire timeouts](#deadlocks), avoid [pdb](#race-conditions) for timing bugs, reach for `faulthandler`/`py-spy` on hangs. See [deadlocks](#deadlocks) for consistent lock ordering.
+Checklist: prefer [logging](#logging) over print, name threads, add [acquire timeouts](#deadlocks), avoid pdb for timing bugs, reach for `faulthandler`/`py-spy` on hangs. See [deadlocks](#deadlocks) for consistent lock ordering and [race conditions](#race-conditions) for root causes.

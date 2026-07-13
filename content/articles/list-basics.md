@@ -4,7 +4,7 @@ title: Python Lists (Dynamic Arrays)
 keywords: [list, dynamic array, array, append, pop, insert, remove, amortized, big o, complexity, contiguous, resize, index, len]
 category: Data Structures
 type: reference
-related: [list-slicing, list-methods, 2d-grid, array-module, deque, stack]
+related: [list-slicing, list-methods, 2d-grid, array-module, deque, stack, complexity-cheatsheet]
 ---
 # Python Lists (Dynamic Arrays)
 

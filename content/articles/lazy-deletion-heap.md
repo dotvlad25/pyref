@@ -38,7 +38,7 @@ def pop_min():
 
 Amortized O(log n) per op; heap may hold stale entries so space is O(number of pushes). Fine when total pushes are bounded.
 
-Two atomic combos avoid a separate push+pop (each O(log n), but one heapify pass, and no transient size change):
+Two atomic combos avoid a separate push+pop (each O(log n), but one sift-down instead of two, and no transient size change):
 
 ```python
 import heapq

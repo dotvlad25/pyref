@@ -20,7 +20,7 @@ related: [gil, choosing-concurrency-model, multiprocessing, threading-basics, as
 
 ## The GIL caps CPython parallelism
 
-Only one thread executes Python bytecode at a time (see [the GIL](#gil)). So threads/asyncio give **concurrency**, not parallelism, for pure-Python code.
+On default builds only one thread executes Python bytecode at a time (see [the GIL](#gil)). So threads/asyncio give **concurrency**, not parallelism, for pure-Python code. (Exception: the opt-in *free-threaded* build, PEP 703, in CPython 3.13+ has no GIL, so threads can run Python in parallel.)
 
 ```python
 # threading  -> concurrency (preemptive: OS scheduler switches threads)

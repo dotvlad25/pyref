@@ -48,3 +48,4 @@ await loop.run_in_executor(my_process_pool, fn, arg)  # CPU-bound work
 - Use `to_thread` for simple I/O-bound blocking calls (`requests`, `boto3`, sync DB drivers).
 - Use [run-in-executor](#run-in-executor) when you need a custom-sized `ThreadPoolExecutor` or a [process-pool](#process-pool) for CPU-bound tasks.
 - Threads only help I/O-bound work — the [gil](#gil) still serializes pure-Python CPU code. Never do heavy CPU or `time.sleep` directly in a coroutine; see [blocking-the-event-loop](#blocking-the-event-loop).
+- Cancelling or timing out (`asyncio.wait_for`) the `await` does NOT stop an already-running thread; the function runs to completion in the background.

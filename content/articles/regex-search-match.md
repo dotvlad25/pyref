@@ -39,7 +39,9 @@ if m:                       # truthy only when it matched
 ```python
 # match(p, s)     ~= search(r"^"  + p, s)
 re.search(r"^\d+", "123abc")   # like match
-# fullmatch(p, s) ~= search("^" + p + "$", s)  (but cleaner + faster intent)
+# fullmatch(p, s) ~= search("^" + p + "$", s)  (but cleaner + stricter)
 ```
+
+These are only exact in the default mode. Under `re.MULTILINE`, `^`/`$` match at every line boundary, while `match`/`fullmatch` always anchor to the string ends. Also `$` matches just *before* a trailing `\n`, so `re.search(r"^\d+$", "123\n")` succeeds but `re.fullmatch(r"\d+", "123\n")` is `None` — prefer `fullmatch` (or `\Z`) for strict validation.
 
 Use `fullmatch` for validation ("is this string entirely a valid X?") and `search` for extraction ("does this contain an X?"). See [findall & finditer](#regex-findall-sub) for *all* matches and [groups](#regex-groups) for extracting parts.

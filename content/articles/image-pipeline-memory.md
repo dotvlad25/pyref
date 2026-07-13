@@ -13,14 +13,14 @@ Scales the [threaded pipeline](#image-pipeline-threadpool) to large images — t
 **The trap:** never load all images up front. A 4000×4000 RGB image is ~48 MB decoded, and intermediates push it to ~150–200 MB. Holding 50 at once ≈ 10 GB — blows a 4 GB budget.
 
 ```python
-imgs = [Image.open(p) for p in all_paths]   # BAD: peak scales with total count
+imgs = [Image.open(p).convert("RGB") for p in all_paths]   # BAD: forces every decode; peak scales with total count
 ```
 
 ## Four ways to keep memory bounded
 
 1. **Stream the work.** Open each image only when its task runs; let it be freed on return. Peak ≈ `(concurrent tasks) × (per-image footprint)`, independent of how many images exist.
 2. **Cap concurrency by a memory budget, not just `cpu_count`** — see [bounded concurrency](#bounded-concurrency).
-3. **Close promptly** with `with Image.open(...)` — releases the decoded buffer at task exit instead of waiting for GC.
+3. **Close promptly** with `with Image.open(...)` — releases the *file handle* at task exit. The decoded pixel buffer is freed separately, when the local goes out of scope on `return` (CPython refcounting, no GC cycle needed).
 4. **Exploit PIL's laziness.** `Image.open()` reads only the header; pixels load on first use. For downscaling JPEGs, `Image.draft()` decodes at reduced size — a big win when the output is much smaller than the source (thumbnails).
 
 ```python
@@ -36,7 +36,7 @@ def safe_worker_count(mem_budget: int, per_image: int, cpu=None) -> int:
 
 def process_one(image_path: Path, pipeline_path: Path, output_dir: Path) -> Path:
     steps = json.loads(pipeline_path.read_text())
-    with Image.open(image_path) as img:          # context manager frees buffer on exit
+    with Image.open(image_path) as img:          # context manager closes the file on exit
         out_format = None
         for step in steps:
             if step.get("action") == "save_format":
@@ -78,4 +78,4 @@ def process_all(images_dir="images", pipelines_dir="pipelines", output_dir="outp
 Peak memory ≈ `workers × per_image`. To stay under budget: `workers = min(cpu_count, budget // per_image)`. For 4 GB and ~200 MB/image that's `min(cpu_count, 20)` — so even on a 32-core box you cap at 20 concurrent decodes, and the 50-image total never matters because only `workers` are ever in flight.
 
 - **Estimate `per_image` from the decoded size**, not the file size — a 2 MB JPEG can be 48 MB decoded, more with intermediates.
-- The `with` block is what makes streaming real: it drops each image's buffer the moment its task returns.
+- Streaming plus capped concurrency is what bounds memory: each task opens its own image, and its decoded buffer is reclaimed when `process_one` returns (the local's last reference drops).

@@ -51,6 +51,7 @@ asyncio.run(main())
 
 - `run_in_executor` only takes **positional** args — use `functools.partial` for kwargs.
 - Pass `None` as the executor to use the loop's default thread pool.
+- With `ProcessPoolExecutor` the target and its args/return must be picklable (define the function at module level, not a lambda/closure).
 
 ## Which to use
 

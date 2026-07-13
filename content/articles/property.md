@@ -33,7 +33,7 @@ c = Circle(5)
 c.radius        # 5      -> calls getter
 c.radius = 10   # runs setter (validates)
 c.area          # 314.159 -> recomputed each access
-# c.area = 1    -> AttributeError: can't set attribute (no setter = read-only)
+# c.area = 1    -> AttributeError: property 'area' of 'Circle' object has no setter
 ```
 
 - `@property` defines the getter; `@<name>.setter` and `@<name>.deleter` add write/delete.

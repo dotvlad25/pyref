@@ -22,7 +22,7 @@ add5(3)                  # 8
 
 ## Use 1: sort key that needs precomputed data
 
-A lambda can't cleanly reference a local like a frequency map; a nested `def` can.
+A `lambda` can capture a local like `freq` too, but a nested `def` gives the key a name and room to grow beyond a single expression (a statement, a branch).
 
 ```python
 from collections import Counter

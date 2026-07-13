@@ -73,4 +73,4 @@ def merge(a, b):
     return dummy.next
 ```
 
-For O(1) removal from both ends, see [doubly linked list](#); the [two-pointers](#) fast/slow trick also detects cycles.
+For O(1) removal from both ends, see [doubly linked list](#doubly-linked-list); the [two-pointers](#two-pointers) fast/slow trick also detects cycles.

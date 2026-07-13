@@ -46,9 +46,15 @@ Processes don't share memory by default. Options:
 from multiprocessing import Queue, Value, Array
 
 q = Queue()                    # process-safe queue for passing data
-counter = Value("i", 0)        # shared integer
+counter = Value("i", 0)        # shared integer, access via counter.value
 arr = Array("d", [0.0] * 10)   # shared array of doubles
+
+with counter.get_lock():       # counter.value += 1 is NOT atomic
+    counter.value += 1         # guard read-modify-write with the lock
 ```
+
+Only picklable objects (and picklable functions/args) cross process
+boundaries — closures, lambdas, and open file handles will fail.
 
 ## When to use what
 

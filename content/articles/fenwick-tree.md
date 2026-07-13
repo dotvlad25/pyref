@@ -8,7 +8,7 @@ related: [coordinate-compression, count-smaller-right, prefix-sum, bit-manipulat
 ---
 # Fenwick Tree (Binary Indexed Tree)
 
-A Fenwick tree (BIT) maintains **prefix sums under point updates** in **O(log n)** each — beating a plain array (O(1) query / O(n) rebuild) or prefix-sum array (O(1) query / O(n) update). The trick is the low bit `i & -i`, which isolates the lowest set bit to hop between responsibility ranges.
+A Fenwick tree (BIT) maintains **prefix sums under point updates** in **O(log n)** each — beating a plain array (O(1) update / O(n) prefix query) or prefix-sum array (O(1) query / O(n) update). The trick is the low bit `i & -i`, which isolates the lowest set bit to hop between responsibility ranges.
 
 ```python
 class BIT:

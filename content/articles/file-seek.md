@@ -47,6 +47,8 @@ Reading the first, middle, and last chunk fingerprints a huge file without readi
 ```python
 def sample(path, size, chunk=4096):
     with open(path, "rb") as f:
+        if size <= chunk * 3:
+            return f.read()                      # small file: read it all
         head = f.read(chunk)
         f.seek(size // 2); mid = f.read(chunk)   # middle
         f.seek(-chunk, os.SEEK_END); tail = f.read(chunk)

@@ -46,7 +46,7 @@ f"{5:04b}"            # '0101'
 ## Arbitrary base out (no built-in — roll your own)
 
 ```python
-def to_base(n, b):
+def to_base(n, b):        # n >= 0, 2 <= b <= 36; negatives loop forever
     if n == 0:
         return "0"
     digits = "0123456789abcdefghijklmnopqrstuvwxyz"

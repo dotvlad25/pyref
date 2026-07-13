@@ -36,6 +36,7 @@ def atomic_write_bytes(path: Path, data: bytes):
 ## Key rules
 
 - **Same filesystem.** Atomicity only holds when the temp file and destination are on the same filesystem (a `rename` across filesystems copies, which isn't atomic). Put the temp file in the **same directory** as the destination — not `/tmp`, which may be a different mount.
+- **Unique temp name.** A fixed `.tmp` suffix collides if two processes write the same path at once (they clobber each other's temp). Use `tempfile.mkstemp(dir=path.parent)` or add a `os.getpid()`/`uuid4` suffix to isolate writers.
 - **Full durability needs an fsync.** For strict crash durability, `flush()` + `os.fsync()` the temp file before `os.replace`, and fsync the directory after. For most app writes the plain pattern is enough.
 
 ## Gotcha: format inference on the temp name

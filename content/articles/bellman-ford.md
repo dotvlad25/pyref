@@ -51,4 +51,4 @@ def has_negative_cycle(n, edges, src):
 # at-most-K edges (LC787)→ Bellman-Ford, capped at K+1 rounds on a dist copy
 ```
 
-Gotcha: guard `dist[u] != inf` before relaxing, or `inf + w` corrupts unreachable nodes.
+Gotcha: with `float('inf')`, `inf + w` stays `inf` (never `< dist[v]`), so the `dist[u] != inf` guard is safe defensiveness. But a **finite sentinel** (e.g. `10**9`) would underflow: `10**9 + (-5) < 10**9` wrongly relaxes unreachable nodes, so the guard is mandatory there.

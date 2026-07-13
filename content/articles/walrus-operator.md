@@ -41,14 +41,18 @@ results = [y for x in data if (y := f(x)) > 0]
 if (n := len(data)) > 10:        # capture + compare
     print(f"too long: {n}")
 
-# Sliding-window / running state without a separate line
+# Running state inside a comprehension (cumulative sums)
+total = 0
+sums = [total := total + x for x in data]
 ```
 
 ## Gotchas
 
 ```python
 x = (y := 5)     # parens often required in assignments/args
-# Skip it when it hurts readability — clarity beats cleverness.
+# Cannot target attributes/subscripts: (obj.x := 1), (d[k] := 1) are SyntaxErrors.
+# In a comprehension the target binds in the ENCLOSING scope, not the loop scope:
+[(y := f(x)) for x in data]      # y survives after the comprehension
 ```
 
 Pairs well with [comprehensions](#comprehensions) and [sliding window](#sliding-window).

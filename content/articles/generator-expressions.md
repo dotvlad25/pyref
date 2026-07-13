@@ -39,6 +39,14 @@ list(gen)   # [0, 1, 2]
 list(gen)   # []  <- exhausted, no reset. Wrap in a function for reuse.
 ```
 
+## Gotcha — the outermost iterable is evaluated eagerly
+
+```python
+gen = (x for x in expensive())  # expensive() runs NOW, not on first next()
+# Only the leftmost 'for' source is evaluated at creation; the body,
+# filters, and any inner loops stay lazy until you iterate.
+```
+
 ## When to use which
 
 ```python

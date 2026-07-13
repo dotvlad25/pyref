@@ -13,10 +13,10 @@ A `dict` subclass for counting hashable items. Building one is **O(N)**.
 ```python
 from collections import Counter
 
-c = Counter("banana")            # Counter({'a': 3, 'n': 2, 'b': 1})
-c = Counter([1, 1, 2, 3])        # from any iterable
-c = Counter(a=2, b=1)            # from kwargs
+Counter([1, 1, 2, 3])            # from any iterable
+Counter(a=2, b=1)                # from kwargs
 
+c = Counter("banana")            # Counter({'a': 3, 'n': 2, 'b': 1})
 c["a"]          # 3
 c["z"]          # 0 (missing keys return 0, they are NOT inserted)
 ```

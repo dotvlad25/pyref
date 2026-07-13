@@ -46,9 +46,10 @@ next(it, "done")           # 'done' — default avoids StopIteration
 class Countdown:
     def __init__(self, n): self.n = n
     def __iter__(self):
-        while self.n > 0:
-            yield self.n   # generator = iterator for free
-            self.n -= 1
+        n = self.n          # local, not self.n -> re-iterable
+        while n > 0:
+            yield n         # generator = iterator for free
+            n -= 1
 ```
 
 Gotcha: an iterator/generator is **single-pass** — once exhausted, re-looping yields nothing. Rebuild it or use a list for multiple passes.

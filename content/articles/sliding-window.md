@@ -51,4 +51,4 @@ def min_subarray_len(target, nums):
     return best if best != float("inf") else 0
 ```
 
-The template: **expand** `right` each step; **shrink** `left` while the window is invalid (or to optimize). See [two pointers](#).
+The template: **expand** `right` each step; **shrink** `left` while the window is invalid (or to optimize). See [two pointers](#two-pointers).

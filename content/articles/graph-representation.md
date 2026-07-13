@@ -30,7 +30,7 @@ for u, v, w in weighted_edges:
     graph[v].append((u, w))   # undirected
 ```
 
-This `(neighbor, weight)` shape is exactly what [Dijkstra](#) consumes.
+This `(neighbor, weight)` shape is exactly what [Dijkstra](#dijkstra) consumes.
 
 ## Grid as an implicit graph
 
@@ -54,4 +54,4 @@ for u, v in edges:
     matrix[u][v] = matrix[v][u] = 1
 ```
 
-Feed either representation into [BFS](#), [DFS](#), or [topological sort](#).
+Feed either representation into [BFS](#bfs), [DFS](#dfs), or [topological sort](#topological-sort).

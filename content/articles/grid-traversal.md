@@ -65,4 +65,6 @@ def flood_fill(grid, sr, sc, new):
     return grid
 ```
 
+Recursive DFS recurses up to O(rows·cols) deep, so a large all-land grid can hit Python's default recursion limit (~1000) — use the iterative BFS above for big grids.
+
 Mutating the grid in place (mark `"1"→"0"`) avoids a separate `visited` set. This is [connected components](#connected-components) on an implicit grid graph.

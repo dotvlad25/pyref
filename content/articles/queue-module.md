@@ -8,7 +8,7 @@ related: [deque, threading-basics, thread-pool, asyncio-queue]
 ---
 # queue Module (Thread-Safe Queues)
 
-`queue.Queue` is the thread-safe channel for the producer-consumer pattern. Unlike [`deque`](#), it has built-in locking, blocking, and task tracking. (For single-threaded use, `deque` is faster.)
+`queue.Queue` is the thread-safe channel for the producer-consumer pattern. Unlike [`deque`](#deque), it has built-in locking, blocking, and task tracking. (For single-threaded use, `deque` is faster.)
 
 ```python
 import queue
@@ -28,6 +28,8 @@ queue.Queue()          # FIFO
 queue.LifoQueue()      # stack (LIFO)
 queue.PriorityQueue()  # get() returns the smallest; put (priority, item) tuples
 ```
+
+On a priority tie, `PriorityQueue` compares the next tuple element, so non-orderable items (e.g. dicts) raise `TypeError`. Add a tiebreak counter: `put((priority, count, item))`.
 
 ## Producer-consumer with task tracking
 

@@ -65,4 +65,14 @@ async def main():
         ...
 ```
 
-Gotcha: close generators promptly. `async for` handles cleanup, but manual iteration should call `await gen.aclose()` to run `finally` blocks. See [asyncio.Queue](#asyncio-queue) for a fan-out alternative.
+Gotcha: `async for` runs the generator's `finally` only on full exhaustion. On `break`/exception, cleanup is deferred to GC or loop shutdown (`asyncio.run` calls `loop.shutdown_asyncgens()`), so `finally` may run much later. To close promptly, wrap the generator:
+
+```python
+from contextlib import aclosing
+
+async with aclosing(stream_pages(3)) as pages:   # calls aclose() on exit
+    async for page in pages:
+        if page == "page 1": break               # finally runs now
+```
+
+See [asyncio.Queue](#asyncio-queue) for a fan-out alternative.

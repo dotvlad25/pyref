@@ -41,8 +41,9 @@ re.findall(r"colou?r", "color colour")  # ['color', 'colour']
 ## Character classes & shorthands
 
 ```python
-# \d digit  \w word char [A-Za-z0-9_]  \s whitespace   (uppercase = negation)
+# \d digit  \w word char  \s whitespace   (uppercase = negation)
 # \D non-digit  \W non-word  \S non-space
+# str patterns are Unicode: \w matches "é", \d matches other digits; re.ASCII restricts to ASCII
 re.findall(r"[aeiou]", "banana")     # ['a','a','a']  set of chars
 re.findall(r"[^0-9]", "a1b2")        # ['a','b']      ^ inside [] = NOT
 re.findall(r"[a-fA-F]", "Gx3aF")     # ['a','F']      ranges

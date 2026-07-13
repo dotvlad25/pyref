@@ -27,7 +27,9 @@ def climb(n):                     # ways to climb n stairs, 1 or 2 at a time
 ## Manual memo (when args aren't hashable, or for grids)
 
 ```python
-def solve(i, j, memo={}):
+def solve(i, j, memo=None):
+    if memo is None:                  # fresh cache per call — never a mutable default
+        memo = {}
     if (i, j) in memo:
         return memo[(i, j)]
     if base_case(i, j):
@@ -52,11 +54,13 @@ def climb_bottom_up(n):
 
 ## Recursion limit
 
-Python caps recursion (~1000). For deep recursion, raise it or go iterative:
+Python caps recursion (default 1000) to protect the C stack. For deep recursion, raise it modestly or go iterative:
 
 ```python
 import sys
 sys.setrecursionlimit(10_000)
 ```
+
+Setting it too high can crash the interpreter (C stack overflow / segfault) rather than raise `RecursionError` — prefer the bottom-up table for very deep problems.
 
 The three DP steps: **define the state**, **write the recurrence**, **add memoization** (or a table).

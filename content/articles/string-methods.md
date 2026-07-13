@@ -15,7 +15,7 @@ s = "  Hello, World!  "
 
 # Whitespace & case
 s.strip()          # "Hello, World!"  (also lstrip / rstrip)
-s.strip("!")       # strips chars in the set, not a substring
+"xxhixx".strip("x")# "hi"  strips any chars in the set from both ends, not a substring
 s.lower()          # "  hello, world!  "
 s.upper()          # "  HELLO, WORLD!  "
 s.casefold()       # aggressive lower (unicode-correct compare)
@@ -48,6 +48,8 @@ Prefer [`find`](#string-search) over `index` when a missing substring is expecte
 "abc123".isalnum()   # True
 "   ".isspace()      # True
 ```
+
+All predicates return `False` on `""`. `isdigit()` also accepts non-ASCII digits (e.g. `"²"`) that `int()` rejects; use `isdecimal()` to test int-parsability.
 
 ```python
 # Palindrome ignoring non-alphanumerics

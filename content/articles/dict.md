@@ -8,7 +8,7 @@ related: [defaultdict, counter, ordereddict, set]
 ---
 # dict (Hash Map)
 
-Python's `dict` is a hash map with **O(1)** average get/set/delete. Insertion order is guaranteed (Python 3.7+).
+Python's `dict` is a hash map with **O(1)** average get/set/delete. Keys must be hashable (typically immutable). Insertion order is guaranteed (Python 3.7+).
 
 ```python
 d = {"a": 1, "b": 2}
@@ -33,7 +33,7 @@ for name, team in pairs:
     groups.setdefault(team, []).append(name)   # groups values by team
 ```
 
-Note the returned list is the *same* object stored in the dict — mutating it mutates the dict entry. For this grouping pattern, [`defaultdict`](#) is cleaner.
+Note the returned list is the *same* object stored in the dict — mutating it mutates the dict entry. For this grouping pattern, [`defaultdict`](#defaultdict) is cleaner.
 
 ## Iterating
 

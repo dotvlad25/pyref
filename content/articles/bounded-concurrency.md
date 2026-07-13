@@ -20,7 +20,7 @@ def safe_worker_count(budget: int, per_task: int, cpu: int | None = None) -> int
     return min(cpu, by_budget)          # whichever limit binds first
 ```
 
-Peak usage ≈ `workers × per_task`, so solving `workers × per_task ≤ budget` gives `workers = budget // per_task`. Take the **min** with `cpu_count` so you never over- or under-subscribe.
+Peak usage ≈ `workers × per_task`, so solving `workers × per_task ≤ budget` gives `workers = budget // per_task`. The **min** with `cpu_count` stops CPU-bound work oversubscribing cores. I/O-bound work (network, DB) runs far more threads than cores — pass a higher `cpu` (e.g. `min(32, os.cpu_count() + 4)`, the executor's own default) or let the connection/rate limit bind instead.
 
 ```python
 # 4 GB budget, ~200 MB per in-flight image:

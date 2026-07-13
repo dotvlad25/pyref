@@ -75,5 +75,6 @@ def process_all(images_dir="images", pipelines_dir="pipelines", output_dir="outp
 - **Capture `img.format` before transforming.** Operations like `convert`/`resize` return new images with `format = None`, so grab the source format first if there's no explicit `save_format`.
 - **The `.tmp` extension hides the real format.** `foo.png.tmp` defeats Pillow's extension-based detection — always pass `format=...` explicitly. See [atomic writes](#atomic-writes).
 - **Idempotency = safe to re-run.** With atomic writes, an interrupted run leaves only complete files; with `skip_existing`, the next run finishes exactly the pairs that are missing.
+- **`skip_existing` keys on the output path only** — not on content. If you edit a pipeline's steps, its old outputs still exist, so a re-run skips them and keeps stale results; delete those outputs (or leave `skip_existing` off) to regenerate.
 
 Combine with the [threaded version](#image-pipeline-threadpool): make `process_one` atomic and resumable, then fan the pairs out — each task is independently crash-safe.

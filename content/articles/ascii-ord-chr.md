@@ -31,7 +31,7 @@ def char_freq(s):
     return freq
 ```
 
-Faster than a [`Counter`](#counter) when the alphabet is fixed and small.
+Faster than a [`Counter`](#counter) when the alphabet is fixed and small. Assumes lowercase `a-z` only: uppercase or digits yield a negative index (Python wraps it, silently corrupting the count) or an `IndexError`. Normalize with `.lower()` and filter first.
 
 ## a-z math (Caesar shift / cipher)
 

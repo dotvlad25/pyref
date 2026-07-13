@@ -4,7 +4,7 @@ title: collections Module Overview
 keywords: [collections, deque, counter, defaultdict, namedtuple, ordereddict, chainmap, standard library, specialized containers, data structures map]
 category: Standard Library
 type: reference
-related: [deque, counter, defaultdict, ordereddict, chainmap, dict, heapq]
+related: [deque, counter, defaultdict, ordereddict, chainmap, dict, heapq, complexity-cheatsheet]
 ---
 # collections Module Overview
 
